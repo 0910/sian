@@ -1,0 +1,17 @@
+In order to get this project working you should check out this repository, via the github tool or with $ git clone git@github.com:nubis/sian.git
+
+Then inside the project's directory you should run:
+
+$ bundle install
+
+$ bundle exec rake db:create
+
+$ bundle exec rake db:migrate
+
+$ bundle exec rake db:test:prepare
+
+$ bundle exec rails s
+
+The username and password for the admin are:
+admin@example.com
+password

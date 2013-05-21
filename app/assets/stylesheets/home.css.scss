@@ -1,0 +1,85 @@
+.home{
+	> .container{
+	width: 920px;
+	}
+	.slider{
+		/*background: url(slider.jpg);*/
+		height: 450px;
+		position: relative;
+		top: 0px;
+		width:900px;
+		margin: auto;
+		img{
+			width: 900px;
+			height: 450px;
+		}
+		.carousel-control{
+			background: none;
+			border: 0px;
+			-webkit-border-radius: 0;
+			-moz-border-radius: 0;
+			border-radius: 0;
+			text-indent: -9999px;
+			background-image: url(flechasweb.png);
+			line-height: 2em;
+		}
+		.left{
+				background-position: 0px 170px;
+				background-repeat: no-repeat;
+				}
+		.right{
+				background-position: -72px 170px;
+				background-repeat: no-repeat;
+				}
+	}
+	#homeText{
+		width: 900px;
+		padding: 10px;
+		margin: 10px auto;
+		h3{
+			text-align: left;
+			color: #1bc0dd;
+			margin-bottom:30px;
+		}
+		p{
+			color: #a5b8b6;
+		}
+	}
+	article{
+		margin: 50px 0 ;
+	}
+	ul{
+		margin: 0;
+		li{
+			width: 20%;
+			display: inline-block;
+			float: left;
+			
+
+
+			a:hover{
+				text-decoration:none;
+				}
+			a:hover p{
+				font-weight:900;
+			}
+			h4{
+				color:#1bc0dd; 
+				font-size: 1.8em;
+			}
+			hr{
+				width: 15%;
+				margin: 10px auto;
+							}
+			p{
+				color: #a5b8b6;
+				text-align: center;
+				width: 90%;
+				margin: auto;
+				font-size: 0.9em;
+			}
+		}
+		
+	} 
+	
+}

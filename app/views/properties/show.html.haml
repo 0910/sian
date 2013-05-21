@@ -1,0 +1,44 @@
+.row-fluid.topContainer
+	.title
+		.line
+		%h1 #{@property.name}
+		.line
+	.slider
+		.carousel.slide#artists 
+			.carousel-inner
+				.item.active
+					= image_tag(@property.images.first.file.url(:large))
+					
+				.item
+					= image_tag(@property.images.first.file.url(:large))
+					
+				.item
+					= image_tag(@property.images.first.file.url(:large))
+					
+				.item
+					= image_tag(@property.images.first.file.url(:large))
+					
+			%a.left.carousel-control{:href=>"#artists", :data => {:slide => "prev"}}
+				<
+			%a.right.carousel-control{:href=>"#artists", :data => {:slide => "next"}}
+				>
+.address.row-fluid
+	.add
+		%h4 #{@property.address}
+.row-fluid.bottomContainer
+	.row-fluid
+		.description
+			%h1 Descripcion
+			%p #{@property.description}
+		.details
+			%h1 Detalles Tecnicos
+			%p.first >  Tipo de propiedad: #{@property.latitude}
+			-if defined? @covered and @uncovered
+				%p superficie: #{@covered + @uncovered}
+				%p superficie2: #{@property.covered_square_meters}
+			%p >  Cant. Habitaciones: #{@property.rooms}
+			%p >  Cant. Baños: #{@property.bathrooms}	
+	.span9.location
+		%h1 Ubicacion
+	.span9.nearby
+		%h1 entorno y puntos de interes

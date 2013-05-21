@@ -1,0 +1,207 @@
+.properties{
+	.index{
+		.dropMenu{
+			border-bottom: rgb(162, 160, 160) thin solid;
+			select.drop{
+				color: rgb(162, 160, 160);
+				margin: auto;
+				display: block;
+				font-size: 3em;
+				height: auto;
+				vertical-align: middle;
+				margin-bottom: 30px;
+				margin-top: 20px;
+				border: white;
+				outline: none;
+				option{
+					background-color: white;
+					border: white;
+					outline: none;
+				}
+			}
+		}
+		.miniMenuContainer{
+			border-bottom: rgb(162, 160, 160) solid thin;
+			font-size: .7em;
+			margin-bottom: 70px;
+			.miniMenu{
+				width: 35%;
+				margin: auto;
+				select.dropMini{
+					/*width: 300px;*/
+					/*margin: auto;*/
+					/*display: block;*/
+					color: rgb(162, 160, 160);
+					margin: auto;
+					font-size: 2em;
+					height: 50px;
+					vertical-align: middle;
+					border: white;
+					outline: none;
+					option{
+						background-color: white;
+						border: white;
+						outline: none;
+					}
+				}
+			}
+
+		}
+		.row-fluid{
+			.span4{
+				/*margin-bottom: 30px;*/
+			}
+		}
+		a{
+			text-decoration: none;
+			letter-spacing: 1pt;
+			text-transform: uppercase;
+			color: #A5B8BC;
+			.item{
+				width: 100%;
+				margin-bottom: 30px;
+				.ph{
+					height: 250px;
+					margin-bottom: 1em;
+					overflow: hidden;
+					img{
+						height:100%;
+						max-width: 810px;
+					}
+				}
+				.ph + h5{
+					color: #1bc0dd;
+					margin: 20px 0 0 0;
+					letter-spacing: 1pt;
+				}
+				h5{
+					margin-top: 10px;
+				}
+				.line{
+					border: 1px solid #888888;
+					width: 2em;
+					margin: 1.5em auto;
+					color: #A5B8BC;
+				}
+				p{
+					text-align: center;
+					color: #A5B8BC;
+				}
+				.bottomDetail {
+					visibility: hidden;
+					margin-top: 34px;
+					border-top: rgb(185, 185, 185) solid thin;
+					h4{
+						margin-top: 10px;
+						line-height: 3em;
+						color: #1bc0dd;
+					}
+				}
+			}
+		}
+		.item:hover{
+			cursor: pointer;
+			background: rgb(225, 230, 231);
+			}
+		.item:hover .bottomDetail {
+			visibility: visible;
+			background-color: rgb(236, 236, 236);
+		}
+		.span4:nth-child(3n+1){
+			margin-left: 0;
+		}
+	}
+	.show{
+		.slider{
+			/*background: url(slider.jpg);*/
+			height: 450px;
+			position: relative;
+			top: 0px;
+			width:900px;
+			margin: auto;
+			margin-bottom: 3em;
+			img{
+				width: 900px;
+				height: 450px;
+			}
+			.carousel-control{
+				background: none;
+				border: 0px;
+				-webkit-border-radius: 0;
+				-moz-border-radius: 0;
+				border-radius: 0;
+				text-indent: -9999px;
+				background-image: url(flechasweb.png);
+				line-height: 2em;
+			}
+			.left{
+				background-position: 0px 170px;
+				background-repeat: no-repeat;
+			}
+			.right{
+				background-position: -72px 170px;
+				background-repeat: no-repeat;
+			}
+		}
+		.address.row-fluid{
+			width: 100%;
+			border: black solid thin;
+			.add{
+				width: 920px;
+				margin: auto;
+				border-left:black solid thin; 
+				border-right:black solid thin;
+				padding-top: 30px;
+			}
+		}
+		.bottomContainer{
+			margin-top: 50px;
+			
+			h4{
+			text-transform: capitalize;
+			}
+			.description{
+				padding-top: 50px;
+				padding-bottom: 50px;
+				border-right: solid thin;
+				float: left;
+				margin: 0 0 0 20px;
+				width:60%;
+				h1{
+					text-align: left;
+					padding-bottom: 30px;
+					padding-left: 100px;
+					border-bottom: SOLID THIN;
+				
+				}
+				p{
+					padding: 20px;
+				}
+			}	
+			.details{
+				float: left;
+				width:20%;
+				padding-top: 50px;
+				padding-bottom: 50px;
+				width:37%;
+				h1{
+					padding-left: 100px;
+					text-align: left;
+					padding-bottom: 30px;
+					border-bottom: SOLID THIN;
+
+				}
+				p{
+					
+					padding-left: 100px;
+				}
+				p.first{
+						padding-top:20px;
+					}
+			}
+		}
+
+		
+		
+	}
+}

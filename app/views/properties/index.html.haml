@@ -1,0 +1,66 @@
+.dropMenu
+	%select.drop.span6{:name=>"Properties"}
+		%option{:value=>"Luxury Properties", :selected => true} 
+			%h1 Luxury Properties
+		%option{:value=>"Urban Properties"}  
+			%h1 Urban Properties
+		%option{:value=>"Commercial Properties"}  
+			%h1 Commercial Properties
+		%option{:value=>"Desarollos Inmobiliarios"}  
+			%h1 Desarollos Inmobiliarios
+		%option{:value=>"Campos Country-Clubs"}  
+			%h1 Campos Country-Clubs
+.miniMenuContainer
+	.miniMenu.container.row-fluid
+		%select.dropMini.span4{:name=>"Properties"}
+			%option{:value=>"Luxury Properties", :selected => true} 
+				%h1 Luxury Properties
+			%option{:value=>"Urban Properties"}  
+				%h1 Urban Properties
+			%option{:value=>"Commercial Properties"}  
+				%h1 Commercial Properties
+			%option{:value=>"Desarollos Inmobiliarios"}  
+				%h1 Desarollos Inmobiliarios
+			%option{:value=>"Campos Country-Clubs"}  
+				%h1 Campos Country-Clubs
+		
+		%select.dropMini.span4{:name=>"Properties"}
+			%option{:value=>"Luxury Properties", :selected => true} 
+				%h1 Luxury Properties
+			%option{:value=>"Urban Properties"}  
+				%h1 Urban Properties
+			%option{:value=>"Commercial Properties"}  
+				%h1 Commercial Properties
+			%option{:value=>"Desarollos Inmobiliarios"}  
+				%h1 Desarollos Inmobiliarios
+			%option{:value=>"Campos Country-Clubs"}  
+				%h1 Campos Country-Clubs
+		
+		%select.dropMini.span4{:name=>"Properties"}
+			%option{:value=>"Luxury Properties", :selected => true} 
+				%h1 Luxury Properties
+			%option{:value=>"Urban Properties"}  
+				%h1 Urban Properties
+			%option{:value=>"Commercial Properties"}  
+				%h1 Commercial Properties
+			%option{:value=>"Desarollos Inmobiliarios"}  
+				%h1 Desarollos Inmobiliarios
+			%option{:value=>"Campos Country-Clubs"}  
+				%h1 Campos Country-Clubs
+
+
+.row-fluid.container
+	- (@properties * 27).each do |property|
+		.span4
+			= link_to(property_path(property)) do
+				.item
+					.ph 
+						- if image = property.images.first
+							= image_tag(image.file.url(:large))
+					%h5 #{property.name}
+					%h5 #{property.neighborhood.name}
+					.line
+					%p #{property.description.truncate(450)}
+					%p $24.000.-
+					.bottomDetail
+						%h4 Ver detalle +
