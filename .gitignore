@@ -17,5 +17,4 @@ public/system
 *.swp
 *.swo
 *.pem
-config/deploy.yml
 

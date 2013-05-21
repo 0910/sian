@@ -1,0 +1,27 @@
+site_name: Sian
+site_url: 23.21.234.59
+
+mysql:
+  database: sian
+  username: sian
+  host: reserved.cn8l9fnr4if0.us-east-1.rds.amazonaws.com
+  password: 7WjVlgbCybpBnaH
+
+s3:
+  aws_access_key_id: ASIAID4IKVJ67A2OQMMQ
+  aws_secret_access_key: nEe+lh0e/g4uv9lZhT0zX2xQJrp5fI57QQEFuoaC
+  bucket_name: sian
+
+exception_email:
+  sender: exception-notifier@example.com
+  recipients: ed@example.com, edd@example.com, eddy@example.com
+  prefix: '[Exception]'
+  
+smtp:
+  address: smtp.gmail.com
+  user_name: example@gmail.com
+  password: ultrasecret
+  port: 587
+  authentication: plain
+  enable_starttls_auto: true
+

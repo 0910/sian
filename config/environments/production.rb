@@ -66,14 +66,14 @@ Sian::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
   
   # Paperclip AWS config
-  config.paperclip_defaults = {
-    storage: :s3,
-    bucket: Settings.s3.bucket_name,
-    s3_credentials: {
-      access_key_id: Settings.s3.aws_access_key_id,
-      secret_access_key: Settings.s3.aws_secret_access_key
-    }
-  }
+  # config.paperclip_defaults = {
+  #   storage: :s3,
+  #   bucket: Settings.s3.bucket_name,
+  #   s3_credentials: {
+  #     access_key_id: Settings.s3.aws_access_key_id,
+  #     secret_access_key: Settings.s3.aws_secret_access_key
+  #   }
+  # }
 
   config.middleware.use ExceptionNotifier,
     sender_address: Settings.exception_email.sender,
