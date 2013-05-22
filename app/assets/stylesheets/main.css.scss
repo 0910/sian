@@ -141,23 +141,23 @@ NAV
 	font-family: 'HelveticaNeueLTStd-Roman';
 	-moz-font-family: 'HelveticaNeueLTStd-Roman';
 	.navbar-inner{
-		height: 120px;
+		height: 140px;
 		background: #1bc0dd;
 		.brand{
 			/*@include border(white);*/
 			background: url(logo.png) no-repeat center center;
-			width: 100px;
-			height: 100px;
+			width: 140px;
+			height: 140px;
 			display: block;
-			margin-top: 0;
-			padding-left:0px;
+			margin:0px;
+			padding:0px;
 		}
 		#title{
 			color: white;
 			font: 30px 'HelveticaNeueLTStd-UltLtEx';
-			line-height: 130px;
+			line-height: 140px;
 			text-align:left;
-			height: 120px;	
+			height: 140px;	
 			margin: 0px;
 			text-decoration: none;
 			width:50%;
