@@ -14,12 +14,12 @@ s3:
 
 exception_email:
   sender: exception-notifier@example.com
-  recipients: ed@example.com, edd@example.com, eddy@example.com
+  recipients: o@nuevediez.com
   prefix: '[Exception]'
   
 smtp:
   address: smtp.gmail.com
-  user_name: example@gmail.com
+  user_name: o@nuevediez.com
   password: ultrasecret
   port: 587
   authentication: plain

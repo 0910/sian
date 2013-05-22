@@ -75,18 +75,20 @@ Sian::Application.configure do
   #   }
   # }
 
-  config.middleware.use ExceptionNotifier,
-    sender_address: Settings.exception_email.sender,
-    exception_recipients: Settings.exception_email.recipients.split(',').collect(&:strip),
-    email_prefix: Settings.exception_email.prefix
 
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address: Settings.smtp.address,
-    user_name: Settings.smtp.user_name,
-    password: Settings.smtp.password,
-    port: Settings.smtp.port,
-    authentication: Settings.smtp.authentication,
-    enable_starttls_auto: Settings.smtp.enable_starttls_auto == 'true',
-  }
+
+  # config.middleware.use ExceptionNotifier,
+  #   sender_address: Settings.exception_email.sender,
+  #   exception_recipients: Settings.exception_email.recipients.split(',').collect(&:strip),
+  #   email_prefix: Settings.exception_email.prefix
+
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   address: Settings.smtp.address,
+  #   user_name: Settings.smtp.user_name,
+  #   password: Settings.smtp.password,
+  #   port: Settings.smtp.port,
+  #   authentication: Settings.smtp.authentication,
+  #   enable_starttls_auto: Settings.smtp.enable_starttls_auto == 'true',
+  # }
 end
