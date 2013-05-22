@@ -1,3 +1,6 @@
+a:hover, a:active, a:focus {
+  outline:0;
+}
 @media(min-width: 980px){
   /*body { padding-top: 60px; }*/
 }
@@ -11,7 +14,6 @@
 	}
 	src: asset-url('helvetica/HelveticaNeueLTStd-MdCn.eot', font);
 	src: asset-url('helvetica/HelveticaNeueLTStd-MdCn.eot', font) format('embedded-opentype'),
-	     /*asset-url('helvetica/HelveticaNeueLTStd-MdCn.woff', font) format('woff'),*/
 	     asset-url('helvetica/HelveticaNeueLTStd-MdCn.ttf', font) format('truetype'),
 	     asset-url('helvetica/HelveticaNeueLTStd-MdCn.svg', font) format('svg');
 }
@@ -23,9 +25,19 @@
 	}
 	src: asset-url('helvetica/HelveticaNeueLTStd-Roman.eot', font);
 	src: asset-url('helvetica/HelveticaNeueLTStd-Roman.eot', font) format('embedded-opentype'),
-	     /*asset-url('titilliumtext22l004-webfont.woff', font) format('woff'),*/
 	     asset-url('helvetica/HelveticaNeueLTStd-Roman.ttf', font) format('truetype'),
 	     asset-url('helvetica/HelveticaNeueLTStd-Roman.svg', font) format('svg');
+}
+@font-face {
+	font: {
+		 family: 'HelveticaNeueLTStd-UltLtEx';
+	   weight: 'normal';
+	   style: 'normal';
+	}
+	src: asset-url('helvetica/HelveticaNeueLTStd-UltLtEx.eot', font);
+	src: asset-url('helvetica/HelveticaNeueLTStd-UltLtEx.eot', font) format('embedded-opentype'),
+	     asset-url('helvetica/HelveticaNeueLTStd-UltLtEx.ttf', font) format('truetype'),
+	     asset-url('helvetica/HelveticaNeueLTStd-UltLtEx.svg', font) format('svg');
 }
 
 h1, h2, h3, h4, h5{
@@ -75,7 +87,7 @@ p{
 }
 @media (min-width: 1200px){
 .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
-width: 1080px;
+width: 920px;
 }
 }
 .navbar .brand {
@@ -125,7 +137,7 @@ NAV
 	border: $color solid thin;
 }
 .navbar{
-	margin-bottom:100px;
+	margin-bottom:73px;
 	font-family: 'HelveticaNeueLTStd-Roman';
 	-moz-font-family: 'HelveticaNeueLTStd-Roman';
 	.navbar-inner{
@@ -133,24 +145,26 @@ NAV
 		background: #1bc0dd;
 		.brand{
 			/*@include border(white);*/
-			background: url(sian_sprite_home-01.png) -19px -4px;
-			width: 50px;
-			height: 60px;
+			background: url(logo.png) no-repeat center center;
+			width: 100px;
+			height: 100px;
 			display: block;
-			margin-top: 1.2em;
-			margin-left: 100px;
+			margin-top: 0;
+			padding-left:0px;
 		}
 		#title{
 			color: white;
-			font: 33px 'HelveticaNeueLTStd-Roman';
-			-moz-font-family: 'HelveticaNeueLTStd-Roman';
-			line-height: 132px;
+			font: 30px 'HelveticaNeueLTStd-UltLtEx';
+			line-height: 130px;
+			text-align:left;
 			height: 120px;	
-			margin: 0 0 0 20px;
+			margin: 0px;
 			text-decoration: none;
+			width:50%;
+			letter-spacing:1.8pt;
 		}
 		#navJuan{
-			margin: 20px auto 0;
+			margin: 8px auto 0;
 			/*@include border(blue);*/
 			height: 45px;
 			width:900px;
@@ -158,17 +172,21 @@ NAV
 		}
 		
 		ul.nav{
-			width: 600px;
+			width: 65%;
+			margin:0 auto;
 			li{
 				height: 41px;
+				width:25%;
 				a{
 					text-shadow:none;
 					color: #1bc0dd;
+					width:auto;
+					padding:0px;
 				}
 			}
 			li:hover{
-			border-bottom: #a9aaaa solid 4px;
-		}
+		    border-bottom: #a9aaaa solid 4px;
+		  }
 		}
 	}
 }
@@ -206,6 +224,10 @@ FOOTER
 	padding-top: 5em;
 	padding-bottom: 3.5em;
 	margin-top: 4.063em;
+    p{
+			margin: 20px 0 0 0;
+			font: 14px/17px;
+		}
 		h4{
 			font-weight: 900;
 			font-size: 1.05em;
@@ -233,10 +255,6 @@ FOOTER
 		h4{
 			display: inline;
 			margin: 0 0 30px 0;
-			}
-		p{
-			margin: 20px 0 0 0;
-			font-family: 14px;
 			}
 		.barrioInner{
 			

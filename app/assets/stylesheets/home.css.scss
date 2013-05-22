@@ -37,12 +37,16 @@
 		padding: 10px;
 		margin: 10px auto;
 		h3{
+		  font:36px 'HelveticaNeueLTStd-UltLtEx';
 			text-align: left;
 			color: #1bc0dd;
-			margin-bottom:30px;
+			margin-top:30px;
 		}
 		p{
-			color: #a5b8b6;
+		  font-size: 14px;
+		  line-heihgt:17px;
+		  margin-top:15px;
+			color: #3A4447;
 		}
 	}
 	article{
@@ -54,9 +58,9 @@
 			width: 20%;
 			display: inline-block;
 			float: left;
-			
-
-
+      a{
+        width:100%;
+      }
 			a:hover{
 				text-decoration:none;
 				}
@@ -64,8 +68,11 @@
 				font-weight:900;
 			}
 			h4{
+        width:100%;
+        font:24px 'HelveticaNeueLTStd-UltLtEx';
 				color:#1bc0dd; 
-				font-size: 1.8em;
+				font-size: 28px;
+				letter-spacing:1pt;
 			}
 			hr{
 				width: 15%;
