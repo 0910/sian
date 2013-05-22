@@ -1,10 +1,11 @@
-#navJuan.row-fluid
-	%ul.nav.navbar
-		%li#properties
-			= link_to('HOME', root_path)
-		%li#neighborhoods
-			= link_to('NOSOTROS', about_us_path)
-		%li#about_us
-			= link_to('PROPIEDADES', properties_path)
-		%li#contact_us
-			= link_to('CONTACTO', contact_us_path)
+#nav
+  .row-fluid
+    %ul.nav.navbar
+      %li#properties
+        = link_to('HOME', root_path)
+      %li#neighborhoods
+        = link_to('NOSOTROS', about_us_path)
+      %li#about_us
+        = link_to('PROPIEDADES', properties_path)
+      %li#contact_us
+        = link_to('CONTACTO', contact_us_path)

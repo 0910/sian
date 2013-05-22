@@ -11,23 +11,26 @@
       = yield(:head)
 
   %body{:class => "#{controller_name} #{action_name}"}
-    %header.navbar.navbar-static-top
-      %nav.navbar-inner
-        .container.row-fluid
-          = link_to '', root_path, class: 'brand'
-          = link_to 'SIAN Group Properties', root_path, id: 'title', class: 'span4'
-          
-            
-        .nav-collapse.collapse
-          = render 'layouts/navigation'
-
-    #main{:role => "main", :class => "#{action_name}"}
-      - flash.each do |name, msg|
-        - if msg.is_a?(String) 
-          %div{:class => "alert alert-#{name == :alert ? "error" : "success"}"}
-            %a.close{"data-dismiss" => "alert"} ×
-            = content_tag :div, msg, :id => "flash_#{name}"
-      = yield
+    #header
+      .row-fluid
+        = link_to '', root_path, class: 'logo span1'
+        .span5(style="margin-left:0px;")
+          = link_to 'SIAN Group Properties', root_path, id: 'title'
+        .span3(style="float:right")
+          .lang
+            = link_to 'ENG', root_path
+            = link_to 'ESP', root_path, class: 'select'
+    .row-fluid
+      .nav-collapse.collapse
+        = render 'layouts/navigation'
+    .row-fluid
+      #main{:role => "main", :class => "#{action_name}"}
+        - flash.each do |name, msg|
+          - if msg.is_a?(String) 
+            %div{:class => "alert alert-#{name == :alert ? "error" : "success"}"}
+              %a.close{"data-dismiss" => "alert"} ×
+              = content_tag :div, msg, :id => "flash_#{name}"
+        = yield
     
     %footer.footer
       .container.row-fluid
