@@ -1,8 +1,8 @@
-.row-fluid.topContainer
-	.title
-		.line
-		%h1 #{@property.name}
-		.line
+.row-fluid
+	.row-fluid
+		%h1(style="margin-bottom:0;") #{@property.name}
+	.row-fluid
+		%h5 #{@property.address}
 	.slider
 		.carousel.slide#artists 
 			.carousel-inner
@@ -22,23 +22,21 @@
 				<
 			%a.right.carousel-control{:href=>"#artists", :data => {:slide => "next"}}
 				>
-.address.row-fluid
-	.add
-		%h4 #{@property.address}
-.row-fluid.bottomContainer
-	.row-fluid
-		.description
-			%h1 Descripcion
-			%p #{@property.description}
-		.details
-			%h1 Detalles Tecnicos
-			%p.first >  Tipo de propiedad: #{@property.latitude}
-			-if defined? @covered and @uncovered
-				%p superficie: #{@covered + @uncovered}
-				%p superficie2: #{@property.covered_square_meters}
-			%p >  Cant. Habitaciones: #{@property.rooms}
-			%p >  Cant. Baños: #{@property.bathrooms}	
-	.span9.location
-		%h1 Ubicacion
-	.span9.nearby
-		%h1 entorno y puntos de interes
+
+.row-fluid
+	.span8
+		%h2 Descripcion
+		%p #{@property.description}
+	.span4
+		%h2 Detalles
+		%ul
+		%li.first  Tipo de propiedad: #{@property.latitude}
+		-if defined? @covered and @uncovered
+			%li superficie: #{@covered + @uncovered}
+			%li superficie2: #{@property.covered_square_meters}
+		%li  Cant. Habitaciones: #{@property.rooms}
+		%li  Cant. Baños: #{@property.bathrooms}	
+.row-fluid
+	%h1 Ubicacion
+.row-fluid
+	%h1 entorno y puntos de interes

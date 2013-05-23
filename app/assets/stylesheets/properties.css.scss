@@ -112,96 +112,14 @@
 		}
 	}
 	.show{
-		.slider{
-			/*background: url(slider.jpg);*/
-			height: 450px;
-			position: relative;
-			top: 0px;
-			width:900px;
-			margin: auto;
-			margin-bottom: 3em;
-			img{
-				width: 900px;
-				height: 450px;
+		ul{
+			li{
+				font: bold 1em/1.85em 'HelveticaLTStd-Light';
+				margin:0;
+				padding:0;
+				color: #3A4447;
 			}
-			.carousel-control{
-				background: none;
-				border: 0px;
-				-webkit-border-radius: 0;
-				-moz-border-radius: 0;
-				border-radius: 0;
-				text-indent: -9999px;
-				background-image: url(flechasweb.png);
-				line-height: 2em;
-			}
-			.left{
-				background-position: 0px 170px;
-				background-repeat: no-repeat;
-			}
-			.right{
-				background-position: -72px 170px;
-				background-repeat: no-repeat;
-			}
-		}
-		.address.row-fluid{
-			width: 100%;
-			border: black solid thin;
-			.add{
-				width: 920px;
-				margin: auto;
-				border-left:black solid thin; 
-				border-right:black solid thin;
-				padding-top: 30px;
-			}
-		}
-		.bottomContainer{
-			margin-top: 50px;
-			
-			h4{
-			text-transform: capitalize;
-			}
-			.description{
-				padding-top: 50px;
-				padding-bottom: 50px;
-				border-right: solid thin;
-				float: left;
-				margin: 0 0 0 20px;
-				width:60%;
-				h1{
-					text-align: left;
-					padding-bottom: 30px;
-					padding-left: 100px;
-					border-bottom: SOLID THIN;
-				
-				}
-				p{
-					padding: 20px;
-				}
-			}	
-			.details{
-				float: left;
-				width:20%;
-				padding-top: 50px;
-				padding-bottom: 50px;
-				width:37%;
-				h1{
-					padding-left: 100px;
-					text-align: left;
-					padding-bottom: 30px;
-					border-bottom: SOLID THIN;
 
-				}
-				p{
-					
-					padding-left: 100px;
-				}
-				p.first{
-						padding-top:20px;
-					}
-			}
 		}
-
-		
-		
 	}
 }
