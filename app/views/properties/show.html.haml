@@ -1,44 +1,38 @@
 .row-fluid
-	.row-fluid
-		%h1(style="margin-bottom:0;") #{@property.name}
-	.row-fluid
-		%h5 #{@property.address}
-	.slider
-		.carousel.slide#artists 
-			.carousel-inner
-				.item.active
-					= image_tag(@property.images.first.file.url(:large))
+  .row-fluid
+    %h1(style="margin-bottom:0;") #{@property.name}
+  .row-fluid
+    %h5 #{@property.address}
+  .slider
+    .carousel.slide#artists 
+      .carousel-inner
+        .item.active
+          = image_tag(@property.images.first.file.url(:large))
+        .item
+          = image_tag(@property.images.first.file.url(:large))
+        .item
+          = image_tag(@property.images.first.file.url(:large))
+        .item
+          = image_tag(@property.images.first.file.url(:large))
 					
-				.item
-					= image_tag(@property.images.first.file.url(:large))
-					
-				.item
-					= image_tag(@property.images.first.file.url(:large))
-					
-				.item
-					= image_tag(@property.images.first.file.url(:large))
-					
-			%a.left.carousel-control{:href=>"#artists", :data => {:slide => "prev"}}
-				<
-			%a.right.carousel-control{:href=>"#artists", :data => {:slide => "next"}}
-				>
-
+        %a.left.carousel-control{:href=>"#artists", :data => {:slide => "prev"}}
+          <
+        %a.right.carousel-control{:href=>"#artists", :data => {:slide => "next"}}
+          >
 .row-fluid
-	.span8
-		%h2 Descripcion
-		%p #{@property.description}
-	.span4
-		%h2 Detalles
-		%ul
-		%li.first  Tipo de propiedad: #{@property.latitude}
-		-if defined? @covered and @uncovered
-			%li superficie: #{@covered + @uncovered}
-			%li superficie2: #{@property.covered_square_meters}
-		%li  Cant. Habitaciones: #{@property.rooms}
-		%li  Cant. Baños: #{@property.bathrooms}	
+  .span8
+    %h2 Descripcion
+    %p #{@property.description}
+  .span4
+    %h2 Detalles
+    %ul
+      %li.first  Tipo de propiedad: #{@property.latitude}
+      -if defined? @covered and @uncovered
+        %li superficie: #{@covered + @uncovered}
+        %li superficie2: #{@property.covered_square_meters}
+        %li  Cant. Habitaciones: #{@property.rooms}
+        %li  Cant. Baños: #{@property.bathrooms}	
 .row-fluid
-	%h1 Ubicacion
+  %h1 Ubicacion
 .row-fluid
-	%h1 entorno y puntos de interes
-
-	-#juancapo1
+  %h1 entorno y puntos de interes
