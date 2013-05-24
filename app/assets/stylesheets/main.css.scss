@@ -131,9 +131,8 @@ NAV
   width:100%;
   height:140px;
   .logo{
-		background: url(logo.png) no-repeat center left;
-		width: 140px;
-		height: 140px;
+		background-image: url(logo.png);
+		background-repeat: no-repeat;
 		display: block;
 		margin:0px;
 		padding:0px;
@@ -269,7 +268,7 @@ FOOTER
 GENERAL
 */
 .slider-next, .slider-prev{
-	background: url(sian_sprite_home-01.png)-3px -607px;
+	background: url(sian_sprite_home-01.png)-3px -607px no-repeat;
 	width: 2.429em;
 	height: 4.714em;
 	display: block;

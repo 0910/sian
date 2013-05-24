@@ -1,66 +1,56 @@
-.dropMenu
-	%select.drop.span6{:name=>"Properties"}
-		%option{:value=>"Luxury Properties", :selected => true} 
-			%h1 Luxury Properties
-		%option{:value=>"Urban Properties"}  
-			%h1 Urban Properties
-		%option{:value=>"Commercial Properties"}  
-			%h1 Commercial Properties
-		%option{:value=>"Desarollos Inmobiliarios"}  
-			%h1 Desarollos Inmobiliarios
-		%option{:value=>"Campos Country-Clubs"}  
-			%h1 Campos Country-Clubs
-.miniMenuContainer
-	.miniMenu.container.row-fluid
-		%select.dropMini.span4{:name=>"Properties"}
-			%option{:value=>"Luxury Properties", :selected => true} 
-				%h1 Luxury Properties
-			%option{:value=>"Urban Properties"}  
-				%h1 Urban Properties
-			%option{:value=>"Commercial Properties"}  
-				%h1 Commercial Properties
-			%option{:value=>"Desarollos Inmobiliarios"}  
-				%h1 Desarollos Inmobiliarios
-			%option{:value=>"Campos Country-Clubs"}  
-				%h1 Campos Country-Clubs
-		
-		%select.dropMini.span4{:name=>"Properties"}
-			%option{:value=>"Luxury Properties", :selected => true} 
-				%h1 Luxury Properties
-			%option{:value=>"Urban Properties"}  
-				%h1 Urban Properties
-			%option{:value=>"Commercial Properties"}  
-				%h1 Commercial Properties
-			%option{:value=>"Desarollos Inmobiliarios"}  
-				%h1 Desarollos Inmobiliarios
-			%option{:value=>"Campos Country-Clubs"}  
-				%h1 Campos Country-Clubs
-		
-		%select.dropMini.span4{:name=>"Properties"}
-			%option{:value=>"Luxury Properties", :selected => true} 
-				%h1 Luxury Properties
-			%option{:value=>"Urban Properties"}  
-				%h1 Urban Properties
-			%option{:value=>"Commercial Properties"}  
-				%h1 Commercial Properties
-			%option{:value=>"Desarollos Inmobiliarios"}  
-				%h1 Desarollos Inmobiliarios
-			%option{:value=>"Campos Country-Clubs"}  
-				%h1 Campos Country-Clubs
+.row-fluid
+  .bigselect
+    .selectmask
+      %select.drop{:name=>"Properties"}
+        %option{:value=>"Luxury Properties", :selected => true} 
+          %h1 Luxury Properties
+        %option{:value=>"Urban Properties"}  
+          %h1 Urban Properties
+        %option{:value=>"Commercial Properties"}  
+          %h1 Commercial Properties
+        %option{:value=>"Desarollos Inmobiliarios"}  
+          %h1 Desarollos Inmobiliarios
+        %option{:value=>"Campos Country-Clubs"}  
+          %h1 Campos Country-Clubs
+.row-fluid
+  .smallselect.span4
+    .selectmask
+      %select.drop{:name=>"Pais"}
+        %option{:value=>"Argentina", :selected => true} 
+          %h1 Argentina
+        %option{:value=>"Exterior"}  
+          %h1 Exterior
+  .smallselect.span4
+    .selectmask
+      %select.drop{:name=>"Localidad"}
+        %option{:value=>"Buenos Aires", :selected => true} 
+          %h1 Buenos Aires
+        %option{:value=>"Capital Federal"}  
+          %h1 Capital Federal
+        %option{:value=>"Interior del pais"}  
+          %h1 Interior del país
+  .smallselect.span4
+    .selectmask
+      %select.drop{:name=>"operacion"}
+        %option{:value=>"venta", :selected => true} 
+          %h1 Venta
+        %option{:value=>"alquiler"}  
+          %h1 Alquiler
+        %option{:value=>"desarrollo"}  
+          %h1 Desarrollo
 
 
 .row-fluid.container
-	- (@properties * 27).each do |property|
-		.span4
-			= link_to(property_path(property)) do
-				.item
-					.ph 
-						- if image = property.images.first
-							= image_tag(image.file.url(:large))
-					%h5 #{property.name}
-					%h5 #{property.neighborhood.name}
-					.line
-					%p #{property.description.truncate(450)}
-					%p $24.000.-
-					.bottomDetail
-						%h4 Ver detalle +
+  - (@properties * 27).each do |property|
+    .span4
+      = link_to(property_path(property)) do
+        .item
+          .ph 
+            - if image = property.images.first
+              = image_tag(image.file.url(:large))
+          %h5 #{property.name}
+          %h1 #{property.neighborhood.name}
+          .line
+          %p $24.000.-
+          .bottomDetail
+            %h4 Ver detalle +
