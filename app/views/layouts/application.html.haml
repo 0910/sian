@@ -21,8 +21,7 @@
             = link_to 'ENG', root_path
             = link_to 'ESP', root_path, class: 'select'
     .row-fluid
-      .nav-collapse.collapse
-        = render 'layouts/navigation'
+      = render 'layouts/navigation'
     .row-fluid
       #main{:role => "main", :class => "#{action_name}"}
         - flash.each do |name, msg|
@@ -34,41 +33,38 @@
     
     %footer.footer
       .row-fluid
-        .container-inner
-          .newsletter.span3
-            %h4 NEWSLETTER
-            %form
-              %input(type="text" placeholder="Nombre")
+        .newsletter.span3
+          %h4 NEWSLETTER
+          %form
+            %input(type="text" placeholder="Nombre")
+            %br
+            %input(type="text" placeholder="Apellido")
+            %br
+            %input(type="email" placeholder="E-mail")
+            %br
+        .barrio.span6
+          .span6
+            %h4 BELGRANO
+            %p
+              Moldes 2276 
               %br
-              %input(type="text" placeholder="Apellido")
+              C1428CRJ - CABA
               %br
-              %input(type="email" placeholder="E-mail")
+              Tel/Fax - 4781-7000 y Rot.
               %br
-          .barrio.span6
-            .barrioInner
-              %h4 BELGRANO
-              %p
-                Moldes 2276 
-                %br
-                C1428CRJ - CABA
-                %br
-                Tel/Fax - 4781-7000 y Rot.
-                %br
-                info@siangroup.net
-            .barrioInner
-              %h4 ZONA NORTE
-              %p
-                San Lorenzo. 807 - La Lucila
-                %br
-                1636 - Pdo. Vicente López
-                %br
-                Tel/Fax - 4784-0593 y Rot.
-                %br
-                info@siangroup.net
-              
-  
-          .social.span2
-            %h4 SOCIAL
-            .twitter
-            .facebook
+              info@siangroup.net
+          .span6
+            %h4 ZONA NORTE
+            %p
+              San Lorenzo. 807 - La Lucila
+              %br
+              1636 - Pdo. Vicente López
+              %br
+              Tel/Fax - 4784-0593 y Rot.
+              %br
+              info@siangroup.net
+        .social.span2
+          %h4 SOCIAL
+          .twitter.span1
+          .facebook.span1
       
