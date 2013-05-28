@@ -2,14 +2,17 @@
     / %a href="http://dev7studios.com" id="dev7link" title="Go to dev7studios">dev7studios
     .slider-wrapper.theme-default
         #slider.nivoSlider
-            %img(src="slider/slider01.jpg" data-thumb="slider/toystory.jpg")
-            %img(src="slider/slider02.jpg" data-thumb="slider/up.jpg")
-            %img(src="slider/slider03.jpg" data-thumb="slider/walle.jpg" data-transition="slideInLeft")
-            %img(src="slider/slider04.jpg" data-thumb="slider/nemo.jpg")
-            %img(src="slider/slider05.jpg" data-thumb="slider/nemo.jpg")
+            %img(src="slider/slider01.jpg" title="luxury properties" data-thumb="slider/toystory.jpg" data-transition="fade")
+            %img(src="slider/slider02.jpg" title="urban properties" data-thumb="slider/up.jpg" data-transition="fade")
+            %img(src="slider/slider03.jpg" title="commercial properties" data-thumb="slider/walle.jpg" data-transition="fade")
+            %img(src="slider/slider04.jpg" title="campos & country-clubs" data-thumb="slider/nemo.jpg" data-transition="fade")
+            %img(src="slider/slider05.jpg" title="developments" data-thumb="slider/nemo.jpg" data-transition="fade")
         #htmlcaption.nivo-html-caption
             %strong This is an example of a HTML caption with
 :javascript
     $(window).load(function() {
-        $('#slider').nivoSlider();
+        $('#slider').nivoSlider({
+          animSpeed: 500,
+          pauseTime: 2000
+        });
     });

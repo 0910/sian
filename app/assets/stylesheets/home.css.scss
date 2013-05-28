@@ -1,6 +1,6 @@
 .home{
 	ul{
-		margin: 0;
+		margin: 20px 0px 0px 0px;
 		list-style:none;
 		li{
 			width: 20%;
@@ -17,15 +17,15 @@
 			}
 			h4{
         width:100%;
-        font:24px 'HelveticaNeueLTStd-UltLtEx';
-				color:#1bc0dd; 
-				font-size: 24px;
+        font:14px 'HelveticaLTStd-Light';
+				color:#9CA2A4; 
 				letter-spacing:1pt;
+				margin:0px;
 			}
 			hr{
 				width: 15%;
 				margin: 10px auto;
-							}
+      }
 			p{
 				color: #a5b8b6;
 				text-align: center;
