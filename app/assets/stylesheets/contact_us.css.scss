@@ -1,0 +1,32 @@
+.contact_us{
+	form{
+		input{
+			min-width:80%; 
+			max-width:80%; 
+			min-height:20%; 
+			max-height:20%;
+			background: transparent;
+			border: 1px solid #ccc;
+			}
+		textarea{
+			min-width:80%; 
+			max-width:80%;
+			min-height:150px; 
+			max-height:150px;
+			border: 1px solid #ccc;
+			border-radius: 0px;
+			background: transparent;
+
+			}
+		textarea:focus{
+			-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(153, 153, 153, 0.6);
+			-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(153, 153, 153, 0.6);
+			border-color: rgba(167, 167, 168, 0.8);
+			box-shadow: none;
+
+
+		}
+	
+	}	
+}
