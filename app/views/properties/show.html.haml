@@ -3,22 +3,7 @@
     %h1(style="margin-bottom:0;") #{@property.name}
   .row-fluid
     %h5 #{@property.address}
-  .slider
-    .carousel.slide#artists 
-      .carousel-inner
-        .item.active
-          = image_tag(@property.images.first.file.url(:large))
-        .item
-          = image_tag(@property.images.first.file.url(:large))
-        .item
-          = image_tag(@property.images.first.file.url(:large))
-        .item
-          = image_tag(@property.images.first.file.url(:large))
-					
-        %a.left.carousel-control{:href=>"#artists", :data => {:slide => "prev"}}
-          <
-        %a.right.carousel-control{:href=>"#artists", :data => {:slide => "next"}}
-          >
+    = render "sliderShow"
 .row-fluid
   .span8
     %h2 Descripcion
