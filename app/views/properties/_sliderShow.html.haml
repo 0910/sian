@@ -1,0 +1,21 @@
+#wrapper
+  .slider-wrapper.theme-default
+    #slider.nivoSlider
+      = image_tag(@property.images.first.file.url(:large), :data => {:thumb => "slider/toystory.jpg"}, :data => {:transition => "fade"})
+      = image_tag(@property.images.second.file.url(:large), :data => {:thumb => "slider/toystory.jpg"}, :data => {:transition => "fade"})
+      = image_tag(@property.images.first.file.url(:large), :data => {:thumb => "slider/toystory.jpg"}, :data => {:transition => "fade"})
+      = image_tag(@property.images.second.file.url(:large), :data => {:thumb => "slider/toystory.jpg"}, :data => {:transition => "fade"})
+      = image_tag(@property.images.first.file.url(:large), :data => {:thumb => "slider/toystory.jpg"}, :data => {:transition => "fade"})
+    #htmlcaption.nivo-html-caption
+      %strong This is an example of a HTML caption with
+:javascript
+  $(window).load(function() {
+    $('#slider').nivoSlider({
+      animSpeed: 500,
+      pauseTime: 2000
+    });
+  });
+
+
+
+    

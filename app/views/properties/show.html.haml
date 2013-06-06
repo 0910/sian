@@ -5,9 +5,24 @@
     %h5 #{@property.address}
     = render "sliderShow"
 .row-fluid
-  .span8
-    %h2 Descripcion
-    %p #{@property.description}
+  .span4
+    %h2 Detalles
+    %ul
+      %li.first  Tipo de propiedad: #{@property.latitude}
+      -if defined? @covered and @uncovered
+        %li superficie: #{@covered + @uncovered}
+        %li superficie2: #{@property.covered_square_meters}
+        %li  Cant. Habitaciones: #{@property.rooms}
+        %li  Cant. Baños: #{@property.bathrooms}
+  .span4
+    %h2 Detalles
+    %ul
+      %li.first  Tipo de propiedad: #{@property.latitude}
+      -if defined? @covered and @uncovered
+        %li superficie: #{@covered + @uncovered}
+        %li superficie2: #{@property.covered_square_meters}
+        %li  Cant. Habitaciones: #{@property.rooms}
+        %li  Cant. Baños: #{@property.bathrooms}
   .span4
     %h2 Detalles
     %ul
