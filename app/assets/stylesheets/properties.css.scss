@@ -1,3 +1,4 @@
+
 .properties{
 	.index{
 		.dropMenu{
@@ -124,6 +125,14 @@
 		}
 	}
 	.show{
+		.desc{
+			h5{
+			border-bottom: 1px solid #ccc;
+			text-align: left;
+			color: #819395;
+			}	
+		}
+		
 		ul{
 			li{
 				font: bold 1em/1.85em 'HelveticaLTStd-Light';

@@ -1,5 +1,5 @@
 #wrapper
-  .slider-wrapper.theme-default
+  .slider-wrapper.theme-default.span8
     #slider.nivoSlider
       = image_tag(@property.images.first.file.url(:large), :data => {:thumb => "slider/toystory.jpg"}, :data => {:transition => "fade"})
       = image_tag(@property.images.second.file.url(:large), :data => {:thumb => "slider/toystory.jpg"}, :data => {:transition => "fade"})
@@ -15,6 +15,9 @@
       pauseTime: 2000
     });
   });
+
+
+    // agregar fotos de aspect cuadrado, no wide porque si no se va a ajustar al widescreen
 
 
 

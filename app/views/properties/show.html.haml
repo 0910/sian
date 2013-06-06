@@ -4,9 +4,9 @@
   .row-fluid
     %h5 #{@property.address}
     = render "sliderShow"
-.row-fluid
+.row-fluid.desc
   .span4
-    %h2 Detalles
+    %h5 Caracteristicas Generales
     %ul
       %li.first  Tipo de propiedad: #{@property.latitude}
       -if defined? @covered and @uncovered
@@ -15,7 +15,7 @@
         %li  Cant. Habitaciones: #{@property.rooms}
         %li  Cant. Baños: #{@property.bathrooms}
   .span4
-    %h2 Detalles
+    %h5 Ambientes
     %ul
       %li.first  Tipo de propiedad: #{@property.latitude}
       -if defined? @covered and @uncovered
@@ -24,7 +24,7 @@
         %li  Cant. Habitaciones: #{@property.rooms}
         %li  Cant. Baños: #{@property.bathrooms}
   .span4
-    %h2 Detalles
+    %h5 Servicios
     %ul
       %li.first  Tipo de propiedad: #{@property.latitude}
       -if defined? @covered and @uncovered
