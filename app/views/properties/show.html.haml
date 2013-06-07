@@ -4,6 +4,15 @@
   .row-fluid
     %h5 #{@property.address}
     = render "sliderShow"
+    .span4.detalles
+      %h1 Detalles
+      %ul
+        %li.first  Tipo de propiedad: #{@property.latitude}
+        -if defined? @covered and @uncovered
+          %li superficie: #{@covered + @uncovered}
+          %li superficie2: #{@property.covered_square_meters}
+          %li  Cant. Habitaciones: #{@property.rooms}
+          %li  Cant. Baños: #{@property.bathrooms}
 .row-fluid.desc
   .span4
     %h5 Caracteristicas Generales

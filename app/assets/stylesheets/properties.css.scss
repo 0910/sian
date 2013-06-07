@@ -67,6 +67,7 @@
 				.ph{
 					margin-bottom: 1em;
 					overflow: hidden;
+					height: 130px;
 					img{
 						width:100%;
 					}
@@ -125,22 +126,26 @@
 		}
 	}
 	.show{
+		.detalles{
+			h1{
+				border-bottom: 1px solid #ccc;
+			}
+		}
 		.desc{
 			h5{
-			border-bottom: 1px solid #ccc;
-			text-align: left;
-			color: #819395;
-			}	
-		}
-		
-		ul{
-			li{
-				font: bold 1em/1.85em 'HelveticaLTStd-Light';
-				margin:0;
-				padding:0;
-				color: #3A4447;
+				border-bottom: 1px solid #ccc;
+				text-align: left;
+				color: #819395;
 			}
-
+			ul{
+				margin-top: 10px
+				li{
+					font: bold 1em/1.85em 'HelveticaLTStd-Light';
+					margin:0;
+					padding:0;
+					color: #3A4447;
+				}
+			}	
 		}
 	}
 }
