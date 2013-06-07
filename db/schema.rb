@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130517155625) do
+ActiveRecord::Schema.define(:version => 20130607182938) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -61,15 +61,6 @@ ActiveRecord::Schema.define(:version => 20130517155625) do
   add_index "images", ["viewable_id"], :name => "index_images_on_viewable_id"
   add_index "images", ["viewable_type"], :name => "index_images_on_viewable_type"
 
-  create_table "neighborhoods", :force => true do |t|
-    t.string   "name"
-    t.string   "url_name"
-    t.text     "description"
-    t.text     "amenities"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
   create_table "properties", :force => true do |t|
     t.string   "name"
     t.string   "url_name"
@@ -91,6 +82,21 @@ ActiveRecord::Schema.define(:version => 20130517155625) do
     t.datetime "updated_at",                                             :null => false
     t.decimal  "sale_price",              :precision => 10, :scale => 0
     t.decimal  "rent_price",              :precision => 10, :scale => 0
+    t.string   "type_of_property"
+    t.string   "country"
+    t.string   "type_of_operation"
+    t.integer  "toilette"
+    t.string   "ubicacion_en_planta"
+    t.string   "estado"
+    t.string   "luminosidad"
+    t.string   "categoria"
+    t.integer  "pisos"
+    t.text     "ambientes"
+    t.string   "agua_caliente"
+    t.string   "calefaccion"
+    t.string   "aire_acondicionado"
+    t.text     "puntos_interes"
+    t.string   "location"
   end
 
   add_index "properties", ["neighborhood_id"], :name => "index_images_on_neighborhood_id"
