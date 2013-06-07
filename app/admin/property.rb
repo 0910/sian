@@ -59,7 +59,7 @@ ActiveAdmin.register Property do
       f.input :categoria
       f.input :pisos
     end
-    f.input :ambientes
+    f.input :ambientes, hint: "Los ambientes son ...ver texto, se escriben de a uno por renglón. Se pueden usar dos puntos (:) para agrupar ambientes o simplemnete dejar el nombre solo el en renglón, por ejemplo:<br/>Gimnasio<br/>Lavadero<br/>Cocina: 3x5".html_safe
     f.inputs :name => "Servicios" do
       f.input :agua_caliente, :as => :select, :collection => ["si", "no"]
       f.input :calefaccion, :as => :select, :collection => ["si", "no"]
