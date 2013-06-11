@@ -1,4 +1,5 @@
 class Property < ActiveRecord::Base
+  validate :name, presence: true
   has_many :images, as: :viewable, order: :position, :dependent => :destroy
   accepts_nested_attributes_for :images, allow_destroy: true
   attr_protected
