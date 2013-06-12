@@ -61,5 +61,6 @@ ActiveAdmin.register Property do
     f.input :puntos_interes
     f.input :amenities, hint: "Los aménities son características específicas de la propiedad y su zona, se escriben de a uno por renglón. Se pueden usar dos puntos (:) para agrupar aménities o simplemnete dejar el nombre solo el en renglón, por ejemplo:<br/>Gimnasio<br/>Lavadero<br/>Colectivos: 15, 110, 128<br/>Plazas: Armenia, Costa Rica".html_safe
     f.input :keywords, hint: 'Las palábras clave son útiles al momento de buscar propiedades, pero pueden dejarse vácias. Un ejemplo de palabras clave: Departamento, Loft, Belgrano, Tigre'
+    f.input :code
   end
 end                               

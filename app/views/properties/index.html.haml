@@ -2,23 +2,18 @@
   = semantic_form_for "", url: properties_path, :html => {:method => :get} do |f|
     .bigselect
       .selectmask
-        = f.input :type_of_property, :as => :select, :label => false, :collection => options_for_select(['Luxury Properties', 'Urban Properties', 'Commercial Properties', 'Desarollos Inmobiliarios', 'Campos Country-Clubs'], 'Luxury Properties') 
+        = f.input :type_of_property, :as => :select, :label => false, :collection => options_for_select(['Todos','Luxury Properties', 'Urban Properties', 'Commercial Properties', 'Desarollos Inmobiliarios', 'Campos Country-Clubs'], 'Luxury Properties') 
     .row-fluid
       .smallselect.span4
         .selectmask
-          = f.input :country, :as => :select, :label => false, :collection => options_for_select(['Argentina', 'Uruguay', 'USA'],'Argentina'), :input_html => {:class =>'drop'}
+          = f.input :country, :as => :select, :label => false, :collection => options_for_select(['Todos', 'Argentina', 'Uruguay', 'USA'],'Todos'), :input_html => {:class =>'drop'}
       .smallselect.span4
         .selectmask
-          = f.input :location, :as => :select, :label => false, :collection => options_for_select(["CABA", "Zona Norte", "Gran Buenos Aires", "Interior del País", "Punta del Este", "Montevideo", "Miami", "New York", "Otras"], 'CABA'), :input_html => {:class =>'drop'}
+          = f.input :location, :as => :select, :label => false, :collection => options_for_select(["Todos","CABA", "Zona Norte", "Gran Buenos Aires", "Interior del País", "Punta del Este", "Montevideo", "Miami", "New York", "Otras"], 'Todos'), :input_html => {:class =>'drop'}
       .smallselect.span4
         .selectmask
           = f.input :type_of_operation, :label => false, :as => :select, :collection => options_for_select(["Todos", "Venta", "Alquiler", "Desarrollos"], 'Todos'), :input_html => {:class =>'drop'}
     = f.button :submit
-
-    %p Tipo de propiedad #{@type_of_property}
-    %p Este es el pais #{@country}
-    %p Esta es la ciudad #{@location}
-    %p Esta es la operación #{@type_of_operation}
 
 .row-fluid.container
   - (@properties * 27).each do |property|

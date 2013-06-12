@@ -7,41 +7,71 @@
     .span4.detalles
       %h1 Detalles
       %ul
-        %li.first  Tipo de propiedad: #{@property.latitude}
-        -if defined? @covered and @uncovered
-          %li superficie: #{@covered + @uncovered}
-          %li superficie2: #{@property.covered_square_meters}
-          %li  Cant. Habitaciones: #{@property.rooms}
-          %li  Cant. Baños: #{@property.bathrooms}
+        %li Tipo de propiedad: #{@property.type_of_property}
+        %li País: #{@property.country}
+        %li Ubicación: #{@property.location}
+        %li Tipo de operación: #{@property.type_of_operation}
+        %li Dirección: #{@property.address}
 .row-fluid.desc
   .span4
-    %h5 Caracteristicas Generales
+    %h5 Características Generales
     %ul
-      %li.first  Tipo de propiedad: #{@property.latitude}
       -if defined? @covered and @uncovered
-        %li superficie: #{@covered + @uncovered}
-        %li superficie2: #{@property.covered_square_meters}
-        %li  Cant. Habitaciones: #{@property.rooms}
-        %li  Cant. Baños: #{@property.bathrooms}
+        %li Superficie total: #{@covered + @uncovered}
+        %li Metros cubiertos: #{@property.covered_square_meters}
+        %li Metros descubiertos: #{@property.uncovered_square_meters}
+        %li Cant. Habitaciones: #{@property.rooms}
+        %li Cant. baños: #{@property.bathrooms}
+        %li Cant. toilettes: #{@property.toilette}
+        %li Ubicación en planta: #{@property.ubicacion_en_planta}
+        %li Estado: #{@property.estado}
+        %li Luminosidad: #{@property.luminosidad}
+  .span4
+    %h5 Caraterísticas del edificio
+    %ul
+      %li  Categoría: #{@property.categoria}
+      %li  Pisos: #{@property.pisos}
   .span4
     %h5 Ambientes
     %ul
-      %li.first  Tipo de propiedad: #{@property.latitude}
-      -if defined? @covered and @uncovered
-        %li superficie: #{@covered + @uncovered}
-        %li superficie2: #{@property.covered_square_meters}
-        %li  Cant. Habitaciones: #{@property.rooms}
-        %li  Cant. Baños: #{@property.bathrooms}
+      %li #{@property.ambientes.split(',')}
+.row-fluid.desc
   .span4
     %h5 Servicios
     %ul
-      %li.first  Tipo de propiedad: #{@property.latitude}
-      -if defined? @covered and @uncovered
-        %li superficie: #{@covered + @uncovered}
-        %li superficie2: #{@property.covered_square_meters}
-        %li  Cant. Habitaciones: #{@property.rooms}
-        %li  Cant. Baños: #{@property.bathrooms}	
+      %li Agua caliente: #{@property.agua_caliente}
+      %li Calefacción: #{@property.calefaccion}
+      %li Aire acondicionado: #{@property.aire_acondicionado}
 .row-fluid
   %h1 Ubicacion
+  #map_canvas
 .row-fluid
   %h1 entorno y puntos de interes
+  .span4
+    %ul
+      %li #{@property.puntos_interes}
+.row-fluid
+  %h1 Amenities
+  .span4
+    %ul
+      %li #{@property.amenities} 
+
+
+:javascript
+  myCenter = new google.maps.LatLng(#{@property.latitude}, #{@property.longitude});
+  function initialize() {
+
+      var mapOptions = {
+        center: myCenter,
+        zoom: 16,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      var map = new google.maps.Map(document.getElementById("map_canvas"),
+          mapOptions);
+      var marker=new google.maps.Marker({
+        position:myCenter,
+      });
+
+      marker.setMap(map);
+
+    }

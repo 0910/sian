@@ -6,11 +6,11 @@
       %meta{:content => content_for?(:description) ? yield(:description) : Settings.site_name , :name => "description"}
       = stylesheet_link_tag "application", :media => "all"
       = javascript_include_tag "application"
-      / = javascript_include_tag "bootstrap.min.js"
+      = javascript_include_tag "http://maps.googleapis.com/maps/api/js?key=AIzaSyAoAqRFSg4SPOGlkeJumobsLgCYKIAAEM0&sensor=false"
       = csrf_meta_tags
       = yield(:head)
 
-  %body{:class => "#{controller_name} #{action_name}"}
+  %body{:class => "#{controller_name} #{action_name}", :onload => "initialize()"}
     #header
       .row-fluid
         = link_to '', root_path, class: 'logo span2'
