@@ -138,9 +138,10 @@
 				color: #819395;
 			}
 			ul{
-				margin-top: 10px
+				margin: 20px 0px;
+				list-style: none;
 				li{
-					font: bold 1em/1.85em 'HelveticaLTStd-Light';
+					font: 13px/21px 'HelveticaNeueLTStd-Roman';
 					margin:0;
 					padding:0;
 					color: #3A4447;
@@ -149,10 +150,24 @@
 		}
 	}
 }
-
+#uru, #usa{
+	display:none;
+}
 #map_canvas{
 	display: block;
 	width: 100%;
-	height: 500px;
+	height: 300px;
+}
+.applyfilters button{
+	margin-top:25px;
+	background:#fff;
+	border:1px solid #ccc;
+	font: 13px/21px 'HelveticaNeueLTStd-Roman';
+	color:#808080;
+	height:30px;
+}
+.applyfilters button:hover{
+	color:#333;
+	border:1px solid #808080;
 }
 /*juan1*/ 

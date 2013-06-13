@@ -3,15 +3,11 @@
     %h1(style="margin-bottom:0;") #{@property.name}
   .row-fluid
     %h5 #{@property.address}
+  .row-fluid(style="margin-top:20px;")
     = render "sliderShow"
     .span4.detalles
-      %h1 Detalles
-      %ul
-        %li Tipo de propiedad: #{@property.type_of_property}
-        %li País: #{@property.country}
-        %li Ubicación: #{@property.location}
-        %li Tipo de operación: #{@property.type_of_operation}
-        %li Dirección: #{@property.address}
+      %h1 Descripción
+      %p #{@property.description}
 .row-fluid.desc
   .span4
     %h5 Características Generales
