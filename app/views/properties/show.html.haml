@@ -34,7 +34,8 @@
   .span4
     %h5 Ambientes
     %ul
-      %li #{@property.ambientes.split(',')}
+      - @ambientes.each do |ambiente|
+        %li #{ambiente}
 .row-fluid.desc
   .span4
     %h5 Servicios
@@ -54,7 +55,8 @@
   %h1 Amenities
   .span4
     %ul
-      %li #{@property.amenities} 
+      - @amenities.each do |amenity|
+        %li #{amenity} 
 
 
 :javascript

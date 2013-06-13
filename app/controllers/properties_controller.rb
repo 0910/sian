@@ -35,6 +35,7 @@ class PropertiesController < ApplicationController
     @property = Property.find(params[:id])
     @covered = @property.covered_square_meters
     @uncovered = @property.uncovered_square_meters 
-    @ambientes = @property.ambientes.split('') 
+    @ambientes = @property.ambientes.split(/\r\n/) 
+    @amenities = @property.amenities.split(/\r\n/) 
   end
 end
