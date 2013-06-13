@@ -23,7 +23,7 @@
         = f.button :Buscar
 
 .row-fluid.container
-  - (@properties * 27).each do |property|
+  - @properties.each do |property|
     .span4
       = link_to(property_path(property)) do
         .item
