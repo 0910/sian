@@ -43,13 +43,13 @@
   %h1 Ubicacion
   #map_canvas
 .row-fluid
-  %h1 entorno y puntos de interes
-  .span4
+  %h1 Entorno y puntos de interés
+  .span4.desc
     %ul
       %li #{@property.puntos_interes}
 .row-fluid
   %h1 Amenities
-  .span4
+  .span4.desc
     %ul
       - @amenities.each do |amenity|
         %li #{amenity} 

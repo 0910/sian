@@ -1,4 +1,26 @@
 .row-fluid
+  .row-fluid.propicons
+    %ul
+      %li
+        %a.luxury(href="#")
+        %h4 Luxury
+        %h4 Properties
+      %li
+        %a.urban(href="#")
+        %h4 Urban
+        %h4 Properties
+      %li
+        %a.commercial(href="#")
+        %h4 Commercial
+        %h4 Properties
+      %li
+        %a.campos(href="#")
+        %h4 Campos &
+        %h4 Country-Clubs
+      %li
+        %a.developments(href="#")
+        %h4 Desarollos
+        %h4 Inmobiliarios
   = semantic_form_for "", url: properties_path, :html => {:method => :get} do |f|
     .row-fluid
       .smallselect.span4
