@@ -3,22 +3,22 @@
 	.row-fluid.propicons
 		%ul
 			%li
-				%a.luxury(href="#")
+				= link_to('', properties_path(:type_of_property => 'Luxury Properties'), :class => 'luxury')
 				%h4 Luxury
 				%h4 Properties
 			%li
-				%a.urban(href="#")
+				= link_to('', properties_path(:type_of_property => 'Urban Properties'), :class => 'urban')
 				%h4 Urban
 				%h4 Properties
 			%li
-				%a.commercial(href="#")
+				= link_to('', properties_path(:type_of_property => 'Commercial Properties'), :class => 'commercial')
 				%h4 Commercial
 				%h4 Properties
 			%li
-				%a.campos(href="#")
+				= link_to('', properties_path(:type_of_property => 'Campos Country-Clubs'), :class => 'campos')
 				%h4 Campos &
 				%h4 Country-Clubs
 			%li
-				%a.developments(href="#")
+				= link_to('', properties_path(:type_of_property => 'Desarollos Inmobiliarios'), :class => 'developments')
 				%h4 Desarollos
 				%h4 Inmobiliarios
