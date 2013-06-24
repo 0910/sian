@@ -17,6 +17,7 @@ class PropertiesController < ApplicationController
 	  else
 	    @location = params[:location]
 	  end
+    
 
 	  if params[:type_of_operation] == 'Todas las operaciones' || params[:type_of_operation] == 'Seleccione tipo de operacion' || params[:type_of_operation] == nil 
 	  	@type_of_operation = 0
