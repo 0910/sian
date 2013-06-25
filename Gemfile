@@ -44,6 +44,7 @@ group :test do
 end
 
 gem 'jquery-rails'
+gem 'bxslider-rails'
 
 gem 'settingslogic'
 gem 'unicorn'

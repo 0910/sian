@@ -1,14 +1,17 @@
 #wrapper
-  .slider-wrapper.theme-default.span8
-    #slider.nivoSlider
+  .span8
+    %ul.bxslider
       - @property.images.each do |image|
-        = image_tag(image.file.url(:large), :data => {:thumb => "slider/toystory.jpg"}, :data => {:transition => "fade"})
+        %li
+          = image_tag(image.file.url(:large))
+
+    .bx-pager
+      - @property.images.each do |image|
+        %a(data-slide-index="0")
+          = image_tag(image.file.url(:large))
 :javascript
-  $(window).load(function() {
-    $('#slider').nivoSlider({
-      animSpeed: 500,
-      pauseTime: 2000
-    });
+  $(document).ready(function(){
+    $('.bxslider').bxSlider();
   });
 
 

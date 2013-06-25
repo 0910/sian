@@ -7,7 +7,9 @@
     = render "sliderShow"
     .span4.detalles
       %h1 Descripción
-      %p #{@property.description}
+.row-fluid
+  %h1 Descripción
+  %p #{@property.description}
 .row-fluid.desc
   .span4
     %h5 Características Generales
@@ -39,21 +41,20 @@
       %li Agua caliente: #{@property.agua_caliente}
       %li Calefacción: #{@property.calefaccion}
       %li Aire acondicionado: #{@property.aire_acondicionado}
-.row-fluid
-  %h1 Ubicacion
-  #map_canvas
-.row-fluid
-  %h1 Entorno y puntos de interés
-  .span4.desc
-    %ul
-      %li #{@property.puntos_interes}
-.row-fluid
-  %h1 Amenities
-  .span4.desc
+  .span4
+    %h5 Amenities
     %ul
       - @amenities.each do |amenity|
         %li #{amenity} 
-
+  .span4
+    %h5 Entorno y puntos de interés
+    %ul
+      %li #{@property.puntos_interes}
+.row-fluid
+  %h1 Ubicacion
+  #map_canvas
+  
+  
 
 :javascript
   myCenter = new google.maps.LatLng(#{@property.latitude}, #{@property.longitude});

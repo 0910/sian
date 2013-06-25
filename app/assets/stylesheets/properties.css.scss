@@ -132,10 +132,13 @@
 			}
 		}
 		.desc{
+			margin-top:30px;
 			h5{
 				border-bottom: 1px solid #ccc;
 				text-align: left;
 				color: #819395;
+				letter-spacing:0.4pt;
+				font-size:20px;
 			}
 			ul{
 				margin: 20px 0px;
@@ -145,6 +148,8 @@
 					margin:0;
 					padding:0;
 					color: #3A4447;
+					text-align:left;
+					width:100%;
 				}
 			}	
 		}
