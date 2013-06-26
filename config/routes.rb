@@ -10,8 +10,7 @@ Sian::Application.routes.draw do
   get 'contact_us' => 'pages#contact_us'
   
   resources :properties, only: [:index, :show]
-  resources :neighborhoods, only: [:index, :show]
-
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
