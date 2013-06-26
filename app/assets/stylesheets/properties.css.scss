@@ -11,7 +11,7 @@
 		  width:110%;
 		  height: auto;
 		  letter-spacing:1pt;
-			color: #819395;
+			color: #999;
 			margin:0px;
 			padding:0px;
 			display: block;
@@ -40,14 +40,14 @@
 		}
 		.smallselect{
 		  margin-top:30px;
-		  margin-bottom:60px;
+		  margin-bottom:20px;
 		  .selectmask{
   		  background:url(arrowmini.png) no-repeat right;
   		  overflow:hidden;
   		  border-bottom:1px solid #ccc;
   		  outline: 0;
   		  select{
-  		    font:16px 'HelveticaLTStd-Light';
+  		    font:14px 'HelveticaLTStd-Light';
   		  }
   		}
 		}
@@ -67,7 +67,7 @@
 				.ph{
 					margin-bottom: 1em;
 					overflow: hidden;
-					height: 130px;
+					height: 181px;
 					img{
 						width:100%;
 					}
@@ -120,9 +120,6 @@
 		    visibility: visible;
 		    background-color: #ECECEC;
 		  }
-		}
-		.span4:nth-child(3n+1){
-			margin-left: 0;
 		}
 	}
 	.show{
