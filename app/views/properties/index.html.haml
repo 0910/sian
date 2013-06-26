@@ -20,18 +20,18 @@
       = link_to('', properties_path(:type_of_property => 'Desarollos Inmobiliarios'), :class => 'developments')
       %h4 Desarollos
       %h4 Inmobiliarios
-  = semantic_form_for "", url: properties_path, :html => {:method => :get} do |f|
+  = semantic_form_for "", url: properties_path, :html => {:method => :get, :autocomplete => "off"} do |f|
     .row-fluid
       = f.input :type_of_property, :as => :hidden, :input_html => {:value => @type_of_property}
       .smallselect.span3(style="margin-left:0px;")
         .selectmask
-          = f.input :country, :as => :select, :include_blank => false, :label => false, :collection => options_for_select(['Seleccione el pais','Todos los paises', 'Argentina', 'Uruguay', 'USA'],'Seleccione el pais'), :input_html => {:class =>'drop'}
-      .smallselect.span4#arg
+          = f.input :country, :as => :select, :include_blank => false, :label => false, :collection => options_for_select(['Seleccione el pais','Todos los paises', 'Argentina', 'Uruguay', 'USA'],'Seleccione el pais'), :input_html => {:class =>'drop', :autocomplete => "off"}
+      .smallselect.span3#arg
         .selectmask
-          = f.input :location, :as => :select, :include_blank => false, :label => false, :collection => options_for_select(["Seleccione el barrio","Todos los barrios","CABA", "Zona Norte", "Gran Buenos Aires", "Interior del País"], 'Seleccione el barrio'), :input_html => {:class =>'drop'}
+          = f.input :location, :as => :select, :include_blank => false, :label => false, :collection => options_for_select(["Seleccione el barrio","Todos los barrios","CABA", "Zona Norte", "Gran Buenos Aires", "Interior del País"], 'Seleccione el barrio'), :input_html => {:class =>'drop', :autocomplete => "off"}
       .smallselect.span4
         .selectmask
-          = f.input :type_of_operation, :include_blank => false, :label => false, :as => :select, :collection => options_for_select(["Seleccione tipo de operacion","Todas las operaciones", "Venta", "Alquiler", "Desarrollos"], 'Seleccione tipo de operacion'), :input_html => {:class =>'drop'}
+          = f.input :type_of_operation, :include_blank => false, :label => false, :as => :select, :collection => options_for_select(["Seleccione tipo de operacion","Todas las operaciones", "Venta", "Alquiler", "Desarrollos"], 'Seleccione tipo de operacion'), :input_html => {:class =>'drop', :autocomplete => "off"}
       .span1.applyfilters
         = f.button :Buscar
 .row-fluid.container
@@ -47,6 +47,9 @@
           %p $24.000.-
           .bottomDetail
             %h4 Ver detalle +
+= @country
+= @location
+= @type_of_operation
 :javascript
   $(function() {
     if('#{@country}'!=0){
