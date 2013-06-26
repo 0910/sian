@@ -17,6 +17,7 @@ ActiveAdmin.register Property do
       row :name
       row :type_of_property
       row :type_of_operation
+      row :price
       row :covered_square_meters
       row :uncovered_square_meters
       row :rooms
@@ -36,6 +37,7 @@ ActiveAdmin.register Property do
     f.input :type_of_operation, :label => "Tipo de operación", :as => :select, :collection => ["Todos", "Venta", "Alquiler", "Desarrollos"]
     f.input :address, hint: "La dirección real de la propiedad, en base a esta dirección se mostrará el mapa de la misma, debe contener la calle, la altura, el barrio y la ciudad, por ejemplo:</br>Pringles 1395, Palermo, Buenos Aires, Argentina.".html_safe
     f.input :public_address, hint: "La dirección pública de esta propiedad, será mostrada directamente a los visitantes del sitio, no necesita ser exacta y puede incluir el piso y departamento:<br/>Pringles y Cabrera 4to 17, Palermo".html_safe
+    f.input :price, :label => "Precio"
     
     f.inputs :name => "Características generales" do
       f.input :covered_square_meters
@@ -52,16 +54,21 @@ ActiveAdmin.register Property do
       f.input :categoria
       f.input :pisos
     end
-    f.input :ambientes, hint: "Los ambientes son ...ver texto, se escriben de a uno por renglón. Se pueden usar dos puntos (:) para agrupar ambientes o simplemnete dejar el nombre solo el en renglón, por ejemplo:<br/>Gimnasio<br/>Lavadero<br/>Cocina: 3x5".html_safe
+    f.input :ambientes,:input_html => {:rows => 10}, hint: "Los ambientes son ...ver texto, se escriben de a uno por renglón. Se pueden usar dos puntos (:) para agrupar ambientes o simplemnete dejar el nombre solo el en renglón, por ejemplo:<br/>Gimnasio<br/>Lavadero<br/>Cocina: 3x5".html_safe
+    f.input :ambientes_en, :label => 'Ambientes en ingles', :input_html => {:rows => 10}
     f.inputs :name => "Servicios" do
       f.input :agua_caliente
       f.input :calefaccion
       f.input :aire_acondicionado
     end
-    f.input :puntos_interes
-    f.input :description
-    f.input :amenities, hint: "Los aménities son características específicas de la propiedad y su zona, se escriben de a uno por renglón. Se pueden usar dos puntos (:) para agrupar aménities o simplemnete dejar el nombre solo el en renglón, por ejemplo:<br/>Gimnasio<br/>Lavadero<br/>Colectivos: 15, 110, 128<br/>Plazas: Armenia, Costa Rica".html_safe
+    f.input :puntos_interes,:input_html => {:rows => 5}
+    f.input :puntos_interes_en, :label => 'Puntos de interes en Ingles', :input_html => {:rows => 5}
+    f.input :description, :input_html => {:rows => 5}
+    f.input :property_description_en, :label => 'Descripción en Ingles', :input_html => {:rows => 5}
+    f.input :amenities, :input_html => {:rows => 10}, hint: "Los aménities son características específicas de la propiedad y su zona, se escriben de a uno por renglón. Se pueden usar dos puntos (:) para agrupar aménities o simplemnete dejar el nombre solo el en renglón, por ejemplo:<br/>Gimnasio<br/>Lavadero<br/>Colectivos: 15, 110, 128<br/>Plazas: Armenia, Costa Rica".html_safe
+    f.input :property_amenities_en, :label => 'Amenities en Ingles', :input_html => {:rows => 10}
     f.input :keywords, hint: 'Las palábras clave son útiles al momento de buscar propiedades, pero pueden dejarse vácias. Un ejemplo de palabras clave: Departamento, Loft, Belgrano, Tigre'
+    f.input :property_keywords_en, :label => 'Palabras clave en ingles'
     f.input :code
   end
 end                               
