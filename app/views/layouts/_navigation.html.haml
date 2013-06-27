@@ -11,4 +11,9 @@
           %li#about_us
             = link_to('PROPIEDADES', properties_path)
           %li#contact_us
-            = link_to('CONTACTO', contact_us_path)
+            = link_to('CONTACTO', contact_us_path) 
+          = semantic_form_for "", url: properties_path, :html => {:method => :get} do |f|
+            .row-fluid
+              = f.input :code, :label => "Buscar por código"
+              = f.button :Buscar
+      

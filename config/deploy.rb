@@ -10,7 +10,7 @@ load "config/recipes/nodejs"
 
 server "74.208.90.50", :web, :app, :db, primary: true
 
-set :domain, 'sian.com'
+set :domain, 'siangroup.net'
 set :user, "root"
 set :application, "sian"
 set :deploy_to, "/var/www/applications/#{application}"

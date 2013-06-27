@@ -20,12 +20,12 @@
       = link_to('', properties_path(:type_of_property => 'Desarollos Inmobiliarios'), :class => 'developments')
       %h4 Desarollos
       %h4 Inmobiliarios
-  = semantic_form_for "", url: properties_path, :html => {:method => :get, :autocomplete => "off"} do |f|
+  = semantic_form_for "", url: properties_path, :html => {:method => :get} do |f|
     .row-fluid
       = f.input :type_of_property, :as => :hidden, :input_html => {:value => @type_of_property}
       .smallselect.span3(style="margin-left:0px;")
         .selectmask
-          = f.input :country, :as => :select, :include_blank => false, :label => false, :collection => options_for_select(['Seleccione el pais','Todos los paises', 'Argentina', 'Uruguay', 'USA'],'Seleccione el pais'), :input_html => {:class =>'drop', :autocomplete => "off"}
+          = f.input :country, :as => :select, :include_blank => false, :label => false, :collection => options_for_select(['Seleccione el pais','Todos los paises', 'Argentina', 'Uruguay', 'USA'],'Seleccione el pais'), :input_html => {:class =>'drop', :autocomplete => :off}
       .smallselect.span4#arg
         .selectmask
           = f.input :location, :as => :select, :include_blank => false, :label => false, :collection => options_for_select(["Seleccione el barrio","Todos los barrios","CABA", "Zona Norte", "Gran Buenos Aires", "Interior del País"], 'Seleccione el barrio'), :input_html => {:class =>'drop', :autocomplete => "off"}
@@ -35,18 +35,21 @@
       .span1.applyfilters
         = f.button :Buscar
 .row-fluid.container
-  - @properties.each do |property|
-    .span4
-      = link_to(property_path(property)) do
-        .item
-          .ph 
-            - if image = property.images.first
-              = image_tag(image.file.url(:large))
-          %h5 #{property.name}
-          .line
-          %p $24.000.-
-          .bottomDetail
-            %h4 Ver detalle +
+  - if @properties.empty?
+    %p La busqueda no arrojó ningún resultado
+  - else
+    - @properties.each do |property|
+      .span4
+        = link_to(property_path(property)) do
+          .item
+            .ph 
+              - if image = property.images.first
+                = image_tag(image.file.url(:large))
+            %h5 #{property.name}
+            .line
+            %p $#{property.price}.-
+            .bottomDetail
+              %h4 Ver detalle +
 :javascript
   $(function() {
     if('#{@country}'!=0){
