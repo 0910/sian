@@ -3,19 +3,24 @@
     %h1(style="margin-bottom:0;") #{@property.name}
   .row-fluid
     %h5 #{@property.public_address}
-  .row-fluid(style="margin-top:20px;")
+  .row-fluid(style="margin-top:30px;")
     = render "sliderShow"
     .span4.detalles
       %h6 Consulta por esta propiedad
+      %p
+        Envíenos un mensaje si desea recibir mas información sobre esta propiedad.
       %form
         %input(type="text" placeholder="Nombre")
+        %br
+        %input(type="tel" placeholder="Teléfono")
         %br
         %input(type="email" placeholder="E-mail")
         %br
         %textarea(placeholder="Comentarios...")
         %br
+        %input(type="submit" value="Enviar Consulta")
 .row-fluid
-  %h1 Descripción
+  %h1(style="margin-top:0px;") Descripción
   %p #{@property.description}
 .row-fluid.desc
   .span4
