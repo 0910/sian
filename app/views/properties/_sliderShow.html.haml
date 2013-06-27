@@ -4,14 +4,11 @@
       - @property.images.each do |image|
         %li
           = image_tag(image.file.url(:large))
-
-    .bx-pager
-      - @property.images.each do |image|
-        %a(data-slide-index="0")
-          = image_tag(image.file.url(:large))
 :javascript
   $(document).ready(function(){
-    $('.bxslider').bxSlider();
+    $('.bxslider').bxSlider({
+      mode: 'fade'
+    });
   });
 
 

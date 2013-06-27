@@ -6,7 +6,14 @@
   .row-fluid(style="margin-top:20px;")
     = render "sliderShow"
     .span4.detalles
-      %h1 Descripción
+      %h6 Consulta por esta propiedad
+      %form
+        %input(type="text" placeholder="Nombre")
+        %br
+        %input(type="email" placeholder="E-mail")
+        %br
+        %textarea(placeholder="Comentarios...")
+        %br
 .row-fluid
   %h1 Descripción
   %p #{@property.description}

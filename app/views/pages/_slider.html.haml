@@ -1,17 +1,26 @@
 #wrapper
-    .slider-wrapper.theme-default
-        #slider.nivoSlider
-            %img(src="slider/slider01.jpg" title="luxury properties" data-thumb="slider/toystory.jpg" data-transition="fade")
-            %img(src="slider/slider02.jpg" title="urban properties" data-thumb="slider/up.jpg" data-transition="fade")
-            %img(src="slider/slider03.jpg" title="commercial properties" data-thumb="slider/walle.jpg" data-transition="fade")
-            %img(src="slider/slider04.jpg" title="campos & country-clubs" data-thumb="slider/nemo.jpg" data-transition="fade")
-            %img(src="slider/slider05.jpg" title="developments" data-thumb="slider/nemo.jpg" data-transition="fade")
-        #htmlcaption.nivo-html-caption
-            %strong This is an example of a HTML caption with
+    %ul.bxslider
+        %li
+            %a(href="properties?type_of_property=Luxury+Properties")
+                %img(src="slider/slider01.jpg" title="Luxury Properties")
+        %li
+            %a(href="properties?type_of_property=Urban+Properties")
+                %img(src="slider/slider02.jpg" title="Urban Properties")
+        %li  
+            %a(href="properties?type_of_property=Commercial+Properties") 
+                %img(src="slider/slider03.jpg" title="Commercial Properties")
+        %li  
+            %a(href="properties?type_of_property=Campos+Country-Clubs") 
+                %img(src="slider/slider04.jpg" title="Campos & Country-Clubs")
+        %li 
+            %a(href="properties?type_of_property=Desarollos+Inmobiliarios")  
+                %img(src="slider/slider05.jpg" title="Developments")
+
 :javascript
-    $(window).load(function() {
-        $('#slider').nivoSlider({
-          animSpeed: 500,
-          pauseTime: 2000
+    $(document).ready(function(){
+        $('.bxslider').bxSlider({
+            auto: true,
+            mode: 'fade',
+            captions: true
         });
     });

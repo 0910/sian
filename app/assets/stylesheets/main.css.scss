@@ -74,6 +74,14 @@ h5{
 	color: #1bc0dd;
 	margin:0px;
 }
+h6 {
+    color: #819395;
+    font: 20px "HelveticaNeueLTStd-UltLtEx";
+    margin: 0 0 20px 0;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    letter-spacing:0.4pt;
+}
 p{
 	font: 1em/1.85em 'HelveticaLTStd-Light';
 	margin:0;
@@ -300,6 +308,34 @@ GENERAL
 	background-position: -120px -80px;
 	top: 3em;
 	right: -5em;
+}
+/*
+SLIDER
+*/
+.bx-wrapper .bx-viewport {
+    background: none;
+    border: 0px;
+    box-shadow: none;
+    left: 0;
+}
+.bx-wrapper .bx-prev{
+	left:20px;
+}
+.bx-wrapper .bx-next{
+	right:20px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active{
+	background:#819395;
+}
+.bx-wrapper .bx-pager.bx-default-pager a{
+	background:#bbb;
+}
+.bx-wrapper .bx-caption{
+	bottom:40px;
+	background:none;
+}
+.bx-wrapper .bx-caption span{
+	font: 30px 'HelveticaNeueLTStd-UltLtEx';
 }
 /*
 ICONS
