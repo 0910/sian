@@ -88,6 +88,9 @@ p{
 	padding:0;
 	color: #3A4447;
 }
+li{
+	list-style:none;
+}
 
 .title{
 	margin: 0 auto;
@@ -174,28 +177,68 @@ NAV
 		letter-spacing:1.8pt;
 	}
 	.lang{
-    height:140px;
-    float:right;
-    a{
-      font: 13px 'HelveticaNeueLTStd-UltLtEx';
-		  text-align:left;
-		  color:#fff;
-		  line-height:140px;
-		  letter-spacing:0.5pt;
-		  padding:0px 0px 2.5px 0px;
-		  text-decoration:none;
-		  border:0px;
-    }
-    a.select{
-       border-bottom:1px solid #fff;
-       font-weight:bold;
-    }
-    a:hover{
-      border-bottom:1px solid #fff;
-    }
-    .hr{
-      height:10px;
-    }
+	    margin-top:40px;
+	    float:right;
+	    a{
+	      font: 13px 'HelveticaNeueLTStd-UltLtEx';
+			  text-align:left;
+			  color:#f0f0f0;
+			  letter-spacing:0.5pt;
+			  padding:0px 0px 2.5px 0px;
+			  text-decoration:none;
+			  border:0px;
+			  float:right;
+			  margin-left:5px;
+	    }
+	    a.select{
+	    	color:#fff;
+	       font-weight:bold;
+	    }
+	    a:hover{
+	    	color:#fff;
+	    }
+	    .hr{
+	      height:10px;
+	    }
+	}
+	#code{
+		width:95%;
+		border:0px;
+		background:none;
+		margin:0px;
+		font: 13px "HelveticaNeueLTStd-Roman";
+		box-shadow:none;
+		border-bottom:1px solid #fff;
+		padding:0px;
+		color:#fff;
+		float:right;
+	}
+	#code_input{
+		width:50%;
+		float:right;
+		margin-right:5px;
+	}
+	.label, .badge{
+		display:none;
+	}
+	.codebox{
+		button {
+		    background: none;
+		    border: 0px;
+		    color: #f0f0f0;
+		    border:1px solid #f0f0f0;
+		    font: 11px/20px "HelveticaNeueLTStd-Roman";
+		    height: 20px;
+		    margin-top: 0px;
+		    padding:0px;
+		    width:22%;
+		    float:right;
+		}
+		button:hover {
+		    border: 0px;
+		    color: #fff;
+		    border:1px solid #fff;
+		}
 	}
 }
 

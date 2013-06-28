@@ -18,8 +18,13 @@
           = link_to 'SIAN Group Properties', root_path, id: 'title'
         .span3(style="float:right")
           .lang
-            = link_to 'ENG', root_path
-            = link_to 'ESP', root_path, class: 'select'
+            .span12
+              = link_to 'ESP', root_path, class: 'select'
+              = link_to 'ENG', root_path
+            = semantic_form_for "", url: properties_path, :html => {:method => :get} do |f|
+              .span12.codebox(style="margin-left:0px;")
+                = f.button :VER
+                = f.input :code, :placeholder => "Código"
     .row-fluid
       = render 'layouts/navigation'
     .row-fluid
