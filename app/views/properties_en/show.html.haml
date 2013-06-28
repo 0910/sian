@@ -20,52 +20,61 @@
         %br
         %input(type="submit" value="Enviar Consulta")
 .row-fluid
-  %h1(style="margin-top:0px;") Descripción
-  %p #{@property.description}
+  %h1(style="margin-top:0px;") Description
+  %p #{@property.property_description_en}
 .row-fluid.desc
   .span4
-    %h5 Características Generales
+    %h5 General characteristics
     %ul
       -if defined? @covered and @uncovered
-        %li Superficie total: #{@covered + @uncovered}
-        %li Metros cubiertos: #{@property.covered_square_meters}
+        %li Square meters – Total: #{@covered + @uncovered}
+        %li Square meters (Br metres)– indoor space: #{@property.covered_square_meters}
         %li Metros descubiertos: #{@property.uncovered_square_meters}
-        %li Cant. Habitaciones: #{@property.rooms}
-        %li Cant. baños: #{@property.bathrooms}
-        %li Cant. toilettes: #{@property.toilette}
-        %li Ubicación en planta: #{@property.ubicacion_en_planta}
-        %li Estado: #{@property.estado}
-        %li Luminosidad: #{@property.luminosidad}
+      %li Rooms: #{@property.rooms}
+      %li Bathrooms: #{@property.bathrooms}
+      %li Toilets: #{@property.toilette}
+      %li Location in ground: #{@property.ubicacion_en_planta}
+      %li Condition: #{@property.estado}
+      %li Brightness: #{@property.luminosidad}
   .span4
-    %h5 Caraterísticas del edificio
+    %h5 Building characteristics
     %ul
-      %li  Categoría: #{@property.categoria}
-      %li  Pisos: #{@property.pisos}
+      %li Category: #{@property.categoria}
+      %li Floors: #{@property.pisos}
   .span4
-    %h5 Ambientes
+    %h5 Rooms
     %ul
-      - unless @ambientes.nil?
-        - @ambientes.each do |ambiente|
+      - unless @ambientes_en.nil?
+        - @ambientes_en.each do |ambiente|
           %li #{ambiente}
 .row-fluid.desc
   .span4
-    %h5 Servicios
+    %h5 Facilities
     %ul
-      %li Agua caliente: #{@property.agua_caliente}
-      %li Calefacción: #{@property.calefaccion}
-      %li Aire acondicionado: #{@property.aire_acondicionado}
+      - if @property.agua_caliente == 'si' || @property.agua_caliente == 'Si'
+        %li Hot water: Yes
+      - else  
+        %li Hot water: #{@property.agua_caliente}
+      - if @property.calefaccion == 'si' || @property.calefaccion == 'Si' 
+        %li Heating: Yes
+      - else
+        %li Heating: #{@property.calefaccion}
+      - if @property.aire_acondicionado == 'si' || @property.aire_acondicionado == 'Si' 
+        %li Air Conditioning: Yes
+      - else
+        %li Air Conditioning: #{@property.aire_acondicionado}
   .span4
     %h5 Amenities
     %ul
-      - unless @amenities.nil?
-        - @amenities.each do |amenity|
+      -unless @amenities_en.nil?
+        - @amenities_en.each do |amenity|
           %li #{amenity} 
   .span4
-    %h5 Entorno y puntos de interés
+    %h5 Points of interest
     %ul
-      %li #{@property.puntos_interes}
+      %li #{@property.puntos_interes_en}
 .row-fluid
-  %h1 Ubicacion
+  %h1 Location
   #map_canvas
   
   

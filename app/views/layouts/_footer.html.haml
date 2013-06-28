@@ -1,0 +1,35 @@
+%footer.footer
+  .row-fluid
+    .newsletter.span3
+      %h4 NEWSLETTER
+      = semantic_form_for "" do |f| 
+        = f.input :name, :label => false, :input_html => {:placeholder => "Nombre"}
+        = f.input :apellido, :label => false, :input_html => {:placeholder => "Apellido"}
+        = f.input :mail, :label => false, :input_html => {:placeholder => "E-mail"}
+        = f.button :Enviar
+    .barrio.span6
+      .span6
+        %h4 BELGRANO
+        %p
+          Moldes 2276 
+          %br
+          C1428CRJ - CABA
+          %br
+          Tel/Fax - 4781-7000 y Rot.
+          %br
+          info@siangroup.net
+      .span6
+        %h4 ZONA NORTE
+        %p
+          San Lorenzo. 807 - La Lucila
+          %br
+          1636 - Pdo. Vicente López
+          %br
+          Tel/Fax - 4784-0593 y Rot.
+          %br
+          info@siangroup.net
+    .social.span2
+      %h4 SOCIAL
+      .twitter.span1
+      .facebook.span1
+      

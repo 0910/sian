@@ -1,0 +1,102 @@
+.row-fluid.propicons
+  %ul
+    %li
+      = link_to('', properties_en_index_path(:type_of_property => 'Luxury Properties'), :class => 'luxury')
+      %h4 Luxury
+      %h4 Properties
+    %li
+      = link_to('', properties_en_index_path(:type_of_property => 'Urban Properties'), :class => 'urban')
+      %h4 Urban
+      %h4 Properties
+    %li
+      = link_to('', properties_en_index_path(:type_of_property => 'Commercial Properties'), :class => 'commercial')
+      %h4 Commercial
+      %h4 Properties
+    %li
+      = link_to('', properties_en_index_path(:type_of_property => 'Campos Country-Clubs'), :class => 'campos')
+      %h4 Campos &
+      %h4 Country-Clubs
+    %li
+      = link_to('', properties_en_index_path(:type_of_property => 'Desarollos Inmobiliarios'), :class => 'developments')
+      %h4 Desarollos
+      %h4 Inmobiliarios
+  = semantic_form_for "", url: properties_en_index_path, :html => {:method => :get} do |f|
+    .row-fluid
+      = f.input :type_of_property, :as => :hidden, :input_html => {:value => @type_of_property}
+      .smallselect.span3(style="margin-left:0px;")
+        .selectmask
+          = f.input :country, :as => :select, :include_blank => false, :label => false, :collection => options_for_select(['Seleccione el pais','Todos los paises', 'Argentina', 'Uruguay', 'USA'],'Seleccione el pais'), :input_html => {:class =>'drop', :autocomplete => :off}
+      .smallselect.span4#arg
+        .selectmask
+          = f.input :location, :as => :select, :include_blank => false, :label => false, :collection => options_for_select(["Seleccione el barrio","Todos los barrios","CABA", "Zona Norte", "Gran Buenos Aires", "Interior del País"], 'Seleccione el barrio'), :input_html => {:class =>'drop', :autocomplete => "off"}
+      .smallselect.span4
+        .selectmask
+          = f.input :type_of_operation, :include_blank => false, :label => false, :as => :select, :collection => options_for_select(["Seleccione tipo de operacion","Todas las operaciones", "Venta", "Alquiler", "Desarrollos"], 'Seleccione tipo de operacion'), :input_html => {:class =>'drop', :autocomplete => "off"}
+      .span1.applyfilters
+        = f.button :Search
+.row-fluid.container
+  - if @properties.empty?
+    %p La busqueda no arrojó ningún resultado
+  - else
+    - @properties.each do |property|
+      .span4
+        = link_to(properties_en_path(property)) do
+          .item
+            .ph 
+              - if image = property.images.first
+                = image_tag(image.file.url(:large))
+            %h5 #{property.name}
+            .line
+            %p $#{property.price}.-
+            .bottomDetail
+              %h4 View more +
+:javascript
+  $(function() {
+    if('#{@country}'!=0){
+      $("select#country option:selected").removeAttr("selected");
+      $("select#country option[value='#{@country}']").attr("selected","selected");
+    }else{
+      $("select#country option:selected").removeAttr("selected");
+      $("select#country option[value='Todos los paises']").attr("selected","selected");
+    }
+    country = $('select#country option:selected').val();
+    changeCountry(country);
+
+    if('#{@location}'!=0){
+      $("select#location option:selected").removeAttr("selected");
+      $("select#location option[value='#{@location}']").attr("selected","selected");
+    }else{
+      $("select#location option:selected").removeAttr("selected");
+      $("select#location option[value='Todos los barrios']").attr("selected","selected");
+    }
+
+    if('#{@type_of_operation}'!=0){
+      $("select#type_of_operation option:selected").removeAttr("selected");
+      $("select#type_of_operation option[value='#{@type_of_operation}']").attr("selected","selected");
+    }else{
+      $("select#type_of_operation option:selected").removeAttr("selected");
+      $("select#type_of_operation option[value='Todas las operaciones']").attr("selected","selected");
+    }
+
+    $('select#country').change(function(){
+      countryChange = $(this).val();
+      changeCountry(countryChange);
+    });   
+  });
+
+  function changeCountry(country){
+    switch(country){
+      case 'Argentina':
+        $('select#location').children().remove();
+        $('select#location').append('<option value="Seleccione el barrio" selected="selected">Seleccione el barrio</option><option value="Todos los barrios">Todos los barrios</option><option value="CABA">CABA</option><option value="Zona Norte">Zona Norte</option><option value="Gran Buenos Aires">Gran Buenos Aires</option><option value="Interior del País">Interior del País</option>');
+        break;
+      case 'Uruguay':
+        $('select#location').children().remove();
+        $('select#location').append('<option value="Seleccione el barrio" selected="selected">Seleccione el barrio</option><option value="Todos los barrios">Todos los barrios</option><option value="Punta del Este">Punta del Este</option><option value="Montevideo">Montevideo</option><option value="Otras">Otras</option>');
+        break;
+      case 'USA':
+        $('select#location').children().remove();
+        $('select#location').append('<option value="Seleccione el barrio" selected="selected">Seleccione el barrio</option><option value="Todos los barrios">Todos los barrios</option><option value="Miami">Miami</option><option value="New York">New York</option><option value="Otras">Otras</option>');
+        break;
+    }
+  }

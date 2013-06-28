@@ -1,4 +1,4 @@
-class PropertiesController < ApplicationController
+class PropertiesEnController < ApplicationController
   def index
     if params[:type_of_property] == nil
       @type_of_property = 'Luxury Properties'
@@ -37,11 +37,11 @@ class PropertiesController < ApplicationController
     @property = Property.find(params[:id])
     @covered = @property.covered_square_meters
     @uncovered = @property.uncovered_square_meters
-    unless @property.ambientes.nil? 
-      @ambientes = @property.ambientes.split(/\r\n/) 
+    unless @property.ambientes_en.nil?
+      @ambientes_en = @property.ambientes_en.split(/\r\n/) 
     end
-    unless @property.amenities.nil?
-      @amenities = @property.amenities.split(/\r\n/) 
+    unless @property.property_amenities_en.nil?
+      @amenities_en = @property.property_amenities_en.split(/\r\n/) 
     end
   end
 end

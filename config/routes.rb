@@ -8,8 +8,13 @@ Sian::Application.routes.draw do
   get 'terms_of_service' => 'pages#terms_of_service'
   get 'privacy_policy' => 'pages#privacy_policy'
   get 'contact_us' => 'pages#contact_us'
+
+  get 'home_en' => 'pages#home_en'
+  get 'about_us_en' => 'pages#about_us_en'
+  get 'contact_us_en' => 'pages#contact_us_en'
   
   resources :properties, only: [:index, :show]
+  resources :properties_en, only: [:index, :show]
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

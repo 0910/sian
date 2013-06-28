@@ -20,13 +20,20 @@
           .lang
             .span12
               = link_to 'ESP', root_path, class: 'select'
-              = link_to 'ENG', root_path
+              = link_to 'ENG', home_en_path
             = semantic_form_for "", url: properties_path, :html => {:method => :get} do |f|
               .span12.codebox(style="margin-left:0px;")
-                = f.button :VER
-                = f.input :code, :placeholder => "Código"
+                - if action_name == 'home_en' || action_name == 'about_us_en' || controller_name == 'properties_en' || action_name == 'contact_us_en'
+                  = f.button :VIEW
+                  = f.input :code, :placeholder => "Code"
+                - else
+                  = f.button :VER
+                  = f.input :code, :placeholder => "Código"
     .row-fluid
-      = render 'layouts/navigation'
+      - if action_name == 'home_en' || action_name == 'about_us_en' || controller_name == 'properties_en' || action_name == 'contact_us_en'
+        = render 'layouts/navigation_en'
+      - else
+        = render 'layouts/navigation'
     .row-fluid
       #main{:role => "main", :class => "#{action_name}"}
         - flash.each do |name, msg|
@@ -36,40 +43,7 @@
               = content_tag :div, msg, :id => "flash_#{name}"
         = yield
     
-    %footer.footer
-      .row-fluid
-        .newsletter.span3
-          %h4 NEWSLETTER
-          %form
-            %input(type="text" placeholder="Nombre")
-            %br
-            %input(type="text" placeholder="Apellido")
-            %br
-            %input(type="email" placeholder="E-mail")
-            %br
-        .barrio.span6
-          .span6
-            %h4 BELGRANO
-            %p
-              Moldes 2276 
-              %br
-              C1428CRJ - CABA
-              %br
-              Tel/Fax - 4781-7000 y Rot.
-              %br
-              info@siangroup.net
-          .span6
-            %h4 ZONA NORTE
-            %p
-              San Lorenzo. 807 - La Lucila
-              %br
-              1636 - Pdo. Vicente López
-              %br
-              Tel/Fax - 4784-0593 y Rot.
-              %br
-              info@siangroup.net
-        .social.span2
-          %h4 SOCIAL
-          .twitter.span1
-          .facebook.span1
-      
+    - if action_name == 'home_en' || action_name == 'about_us_en' || controller_name == 'properties_en' || action_name == 'contact_us_en'
+      = render 'layouts/footer_en'
+    - else
+      = render 'layouts/footer'

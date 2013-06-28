@@ -1,0 +1,19 @@
+#wrapper
+  .span8
+    %ul.bxslider
+      - @property.images.each do |image|
+        %li
+          = image_tag(image.file.url(:large))
+:javascript
+  $(document).ready(function(){
+    $('.bxslider').bxSlider({
+      mode: 'fade'
+    });
+  });
+
+
+    // agregar fotos de aspect cuadrado, no wide porque si no se va a ajustar al widescreen
+
+
+
+    

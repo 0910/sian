@@ -1,0 +1,15 @@
+.navbar.navbar-inverse.navbar-fixed-top
+  .navbar-inner
+    .container
+      %button.btn.btn-navbar(type="button" data-toggle="collapse" data-target=".nav-collapse")
+      .nav-collapse.collapse
+        %ul.nav.navbar
+          %li#properties
+            = link_to('HOME', home_en_path)
+          %li#neighborhoods
+            = link_to('ABOUT US', about_us_en_path)
+          %li#about_us
+            = link_to('PROPERTIES', properties_en_index_path)
+          %li#contact_us
+            = link_to('CONTACT', contact_us_en_path) 
+      
