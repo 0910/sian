@@ -185,7 +185,6 @@
     background:transparent url(arrowmini.png) no-repeat center center;
   }
   .propicons{
-    display:none;
   }
 }
 @media (max-width: 568px){
@@ -201,6 +200,17 @@
     margin:0;
     padding:0;
   }
+  .home{
+    ul{
+      margin:0px;
+    }
+    .bx-prev, .bx-next, .bx-caption{
+      display:none;
+    }
+    .bxslider{
+      margin:0px;
+    }
+  }
   #header{
     width:100%;
     .span3, .span5{
@@ -209,6 +219,16 @@
   }
   .properties .index .bigselect .selectmask select {
     font: 18px "HelveticaNeueLTStd-UltLtEx";
+  }
+  .properties .index .smallselect {
+    margin:0px;
+    .selectmask {
+      margin:0 5%;
+      width:90%;
+    }
+  }
+  .properties .index .smallselect:first-child {
+    margin-top:30px;
   }
   .properties .index .bigselect {
     width: 80%;
@@ -294,7 +314,13 @@
     background:transparent url(arrowmini.png) no-repeat center center;
   }
   .propicons{
-    display:none;
+    ul li{
+      width:60%;
+      padding:0 20%;
+      a{
+        width:100%;
+      }
+    }
   }
   .slider-wrapper{
     .nivo-caption{
