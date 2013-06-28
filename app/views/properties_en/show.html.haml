@@ -6,19 +6,19 @@
   .row-fluid(style="margin-top:30px;")
     = render "sliderShow"
     .span4.detalles
-      %h6 Consulta por esta propiedad
+      %h6 More about this property
       %p
-        Envíenos un mensaje si desea recibir mas información sobre esta propiedad.
+        For more information send us a message.
       %form
-        %input(type="text" placeholder="Nombre")
+        %input(type="text" placeholder="Name")
         %br
-        %input(type="tel" placeholder="Teléfono")
+        %input(type="tel" placeholder="Phone")
         %br
         %input(type="email" placeholder="E-mail")
         %br
-        %textarea(placeholder="Comentarios...")
+        %textarea(placeholder="Comments...")
         %br
-        %input(type="submit" value="Enviar Consulta")
+        %input(type="submit" value="Send message")
 .row-fluid
   %h1(style="margin-top:0px;") Description
   %p #{@property.property_description_en}

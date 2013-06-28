@@ -43,7 +43,7 @@ a:hover, a:active, a:focus {
   outline:0;
 }
 h1{
-	font:36px 'HelveticaNeueLTStd-UltLtEx';
+	font:30px 'HelveticaNeueLTStd-UltLtEx';
 	text-align: center;
 	color: #819395;
 	margin:30px 0px;
@@ -200,6 +200,9 @@ NAV
 	    .hr{
 	      height:10px;
 	    }
+	    button[type="submit"]{
+	    	margin-right:0px;
+	    }
 	}
 	#code{
 		width:95%;
@@ -328,7 +331,6 @@ FOOTER
 		.twitter{
 			background-position: -42px 0px;
 		}
-		
 	}
 }
 
@@ -459,7 +461,7 @@ a.developments:hover{
 /*Home*/
 .home, .home_en{
 	ul{
-		margin: 20px 0px 0px 0px;
+		margin: 0px 0px 0px 0px;
 		list-style:none;
 		li{
 			width: 20%;

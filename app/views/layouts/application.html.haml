@@ -19,8 +19,12 @@
         .span3(style="float:right")
           .lang
             .span12
-              = link_to 'ESP', root_path, class: 'select'
-              = link_to 'ENG', home_en_path
+              - if action_name == 'home_en' || action_name == 'about_us_en' || controller_name == 'properties_en' || action_name == 'contact_us_en'
+                = link_to 'ESP', root_path
+                = link_to 'ENG', home_en_path, class: 'select'
+              - else
+                = link_to 'ESP', root_path, class: 'select'
+                = link_to 'ENG', home_en_path
             = semantic_form_for "", url: properties_path, :html => {:method => :get} do |f|
               .span12.codebox(style="margin-left:0px;")
                 - if action_name == 'home_en' || action_name == 'about_us_en' || controller_name == 'properties_en' || action_name == 'contact_us_en'

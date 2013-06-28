@@ -13,11 +13,11 @@
       %h4 Commercial
       %h4 Properties
     %li
-      = link_to('', properties_path(:type_of_property => 'Campos Country-Clubs'), :class => 'campos')
+      = link_to('', properties_path(:type_of_property => 'Campos & Country Clubs'), :class => 'campos')
       %h4 Campos &
       %h4 Country-Clubs
     %li
-      = link_to('', properties_path(:type_of_property => 'Desarollos Inmobiliarios'), :class => 'developments')
+      = link_to('', properties_path(:type_of_property => 'Developments'), :class => 'developments')
       %h4 Desarollos
       %h4 Inmobiliarios
   = semantic_form_for "", url: properties_path, :html => {:method => :get} do |f|

@@ -13,11 +13,11 @@
       %h4 Commercial
       %h4 Properties
     %li
-      = link_to('', properties_en_index_path(:type_of_property => 'Campos Country-Clubs'), :class => 'campos')
+      = link_to('', properties_en_index_path(:type_of_property => 'Country Properties'), :class => 'campos')
       %h4 Campos &
       %h4 Country-Clubs
     %li
-      = link_to('', properties_en_index_path(:type_of_property => 'Desarollos Inmobiliarios'), :class => 'developments')
+      = link_to('', properties_en_index_path(:type_of_property => 'Developments'), :class => 'developments')
       %h4 Desarollos
       %h4 Inmobiliarios
   = semantic_form_for "", url: properties_en_index_path, :html => {:method => :get} do |f|
@@ -25,18 +25,18 @@
       = f.input :type_of_property, :as => :hidden, :input_html => {:value => @type_of_property}
       .smallselect.span3(style="margin-left:0px;")
         .selectmask
-          = f.input :country, :as => :select, :include_blank => false, :label => false, :collection => options_for_select(['Seleccione el pais','Todos los paises', 'Argentina', 'Uruguay', 'USA'],'Seleccione el pais'), :input_html => {:class =>'drop', :autocomplete => :off}
+          = f.input :country, :as => :select, :include_blank => false, :label => false, :collection => options_for_select(['Select Country','All Countries', 'Argentina', 'Uruguay', 'USA'],'Select Country'), :input_html => {:class =>'drop', :autocomplete => :off}
       .smallselect.span4#arg
         .selectmask
-          = f.input :location, :as => :select, :include_blank => false, :label => false, :collection => options_for_select(["Seleccione el barrio","Todos los barrios","CABA", "Zona Norte", "Gran Buenos Aires", "Interior del País"], 'Seleccione el barrio'), :input_html => {:class =>'drop', :autocomplete => "off"}
+          = f.input :location, :as => :select, :include_blank => false, :label => false, :collection => options_for_select(["Select Location","All Locations","CABA", "Zona Norte", "Gran Buenos Aires", "Interior del País"], 'Select Location'), :input_html => {:class =>'drop', :autocomplete => "off"}
       .smallselect.span4
         .selectmask
-          = f.input :type_of_operation, :include_blank => false, :label => false, :as => :select, :collection => options_for_select(["Seleccione tipo de operacion","Todas las operaciones", "Venta", "Alquiler", "Desarrollos"], 'Seleccione tipo de operacion'), :input_html => {:class =>'drop', :autocomplete => "off"}
+          = f.input :type_of_operation, :include_blank => false, :label => false, :as => :select, :collection => options_for_select(["Select type of Operation","All types of Operation", "Venta", "Alquiler", "Desarrollos"], 'Select type of Operation'), :input_html => {:class =>'drop', :autocomplete => "off"}
       .span1.applyfilters
         = f.button :Search
 .row-fluid.container
   - if @properties.empty?
-    %p La busqueda no arrojó ningún resultado
+    %p No results found for this search
   - else
     - @properties.each do |property|
       .span4
