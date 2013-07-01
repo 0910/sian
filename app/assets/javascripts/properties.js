@@ -11,10 +11,10 @@ $(function(){
 		case 'Commercial Properties':
 			$('a.commercial').css({'background-position':'-322px -127px'});
 			break;
-		case 'Campos Country-Clubs':
+		case 'Campos & Counrty Clubs':
 			$('a.campos').css({'background-position':'-672px -127px'});
 			break;
-		case 'Desarollos Inmobiliarios':
+		case 'Developments':
 			$('a.developments').css({'background-position':'-499px -127px'})
 	}
 });
