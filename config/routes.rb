@@ -7,17 +7,20 @@ Sian::Application.routes.draw do
   get 'about_us' => 'pages#about_us'
   get 'terms_of_service' => 'pages#terms_of_service'
   get 'privacy_policy' => 'pages#privacy_policy'
-  get 'contact_us' => 'pages#contact_us'
+  # get 'contact_us' => 'pages#contact_us'
 
   get 'home_en' => 'pages#home_en'
   get 'about_us_en' => 'pages#about_us_en'
-  get 'contact_us_en' => 'pages#contact_us_en'
+  #get 'contact_us_en' => 'pages#contact_us_en'
   
   resources :properties, only: [:index, :show]
   resources :properties_en, only: [:index, :show]
 
   match 'contact' => 'contact#new', :as => 'contact', :via => :get
   match 'contact' => 'contact#create', :as => 'contact', :via => :post
+  
+  match 'contact_en' => 'contact_en#new', :as => 'contact_en', :via => :get
+  match 'contact_en' => 'contact_en#create', :as => 'contact_en', :via => :post
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

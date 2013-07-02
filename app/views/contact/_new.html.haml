@@ -1,6 +1,0 @@
-= semantic_form_for(@message, :url => contact_path) do |f| 
-  = f.input :name, :label => false, :input_html => {:placeholder => "Nombre"}
-  = f.input :phone, :label => false, :input_html => {:placeholder => "Teléfono"}
-  = f.input :email, :label => false, :input_html => {:placeholder => "E-mail"}
-  = f.input :body, :as => :text,:label => false, :input_html => {:placeholder => "Commentarios...", :rows => 4}
-  = f.button :Enviar
