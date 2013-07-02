@@ -4,8 +4,8 @@
     = semantic_form_for "" do |f| 
       = f.input :name, :label => false, :input_html => {:placeholder => "Nombre"}
       = f.input :phone, :label => false, :input_html => {:placeholder => "Teléfono"}
-      = f.input :mail, :label => false, :input_html => {:placeholder => "E-mail"}
-      = f.input :comments, :as => :text,:label => false, :input_html => {:placeholder => "Commentarios...", :rows => 4}
+      = f.input :email, :label => false, :input_html => {:placeholder => "E-mail"}
+      = f.input :body, :as => :text,:label => false, :input_html => {:placeholder => "Commentarios...", :rows => 4}
       = f.button :Enviar
   .span6
     %h2 Contacto

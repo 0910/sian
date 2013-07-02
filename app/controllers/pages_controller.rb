@@ -20,4 +20,5 @@ class PagesController < ApplicationController
 
   def contact_us_en
   end
+
 end

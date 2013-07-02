@@ -2,11 +2,7 @@
   .row-fluid
     .newsletter.span3
       %h4 NEWSLETTER
-      = semantic_form_for "" do |f| 
-        = f.input :name, :label => false, :input_html => {:placeholder => "Nombre"}
-        = f.input :apellido, :label => false, :input_html => {:placeholder => "Apellido"}
-        = f.input :mail, :label => false, :input_html => {:placeholder => "E-mail"}
-        = f.button :Enviar
+      =# render 'contact/new'      
     .barrio.span6
       .span6
         %h4 BELGRANO
