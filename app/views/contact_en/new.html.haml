@@ -1,7 +1,7 @@
 .row-fluid.contact_us
   .span6
     %h2 Send us your inquiry
-    = semantic_form_for @message, :url => contact_path do |f| 
+    = semantic_form_for @message, :url => contact_en_path do |f| 
       = f.input :name, :label => false, :input_html => {:placeholder => "Name"}
       = f.input :phone, :label => false, :input_html => {:placeholder => "Phone"}
       = f.input :email, :label => false, :input_html => {:placeholder => "E-mail"}
