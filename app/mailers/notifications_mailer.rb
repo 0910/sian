@@ -4,6 +4,12 @@ class NotificationsMailer < ActionMailer::Base
 
   def new_message(message)
     @message = message
-    mail(:subject => "Mensaje del sitio siangroup.net")
+    mail(:subject => "Mensaje de contacto del sitio siangroup.net")
   end
+
+  def new_message_property(message)
+    @message = message
+    mail(:subject => "Consulta por una propiedad del sitio siangroup.net")
+  end
+
 end

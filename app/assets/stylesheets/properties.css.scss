@@ -139,8 +139,7 @@
 					background:#fff;
 					border:1px solid #ddd;
 				}
-				input[type="submit"]{
-					float:right;
+				button{
 					border:1px solid #ccc;
 					border:none;
 					background:none;
@@ -149,7 +148,7 @@
 					text-transform:uppercase;
 					margin-top:10px;
 				}
-				input[type="submit"]:hover{
+				button:hover{
 					color:#aaa;
 				}
 				textarea{

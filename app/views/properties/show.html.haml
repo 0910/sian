@@ -9,16 +9,13 @@
       %h6 Consulta por esta propiedad
       %p
         Envíenos un mensaje si desea recibir mas información sobre esta propiedad.
-      %form
-        %input(type="text" placeholder="Nombre")
-        %br
-        %input(type="tel" placeholder="Teléfono")
-        %br
-        %input(type="email" placeholder="E-mail")
-        %br
-        %textarea(placeholder="Comentarios...")
-        %br
-        %input(type="submit" value="Enviar Consulta")
+      = semantic_form_for @message, :url => properties_path(@property) do |f|
+        = f.input :property, :as => :hidden, :input_html => {:value => @property.name} 
+        = f.input :name, :label => false, :input_html => {:placeholder => "Nombre"}
+        = f.input :phone, :label => false, :input_html => {:placeholder => "Teléfono"}
+        = f.input :email, :label => false, :input_html => {:placeholder => "E-mail"}
+        = f.input :body, :as => :text,:label => false, :input_html => {:placeholder => "Commentarios...", :rows => 4}
+        = f.button 'Enviar consulta'
 .row-fluid
   %h1(style="margin-top:0px;") Descripción
   %p #{@property.description}
