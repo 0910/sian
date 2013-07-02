@@ -66,7 +66,7 @@ module Sian
       :port                 => 587,
       :domain               => "siangroup.net",
       :user_name            => "octaviopochiero@gmail.com",
-      :password             => "Super-Secure-Password",
+      :password             => "octa30277519",
       :authentication       => :plain,
       :enable_starttls_auto => true
     }
