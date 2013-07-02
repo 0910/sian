@@ -220,6 +220,24 @@
       display:none;
     }
   }
+  .properties .show .row-fluid, .properties_en .show .row-fluid{
+    width:100%;
+    .span4{
+      width:80%;
+      margin:0 10%;
+    }
+    .detalles{
+      display:none;
+    }
+    h5{
+      float:left;
+      margin-top:20px;
+      width:100%;
+    }
+  }
+  .properties .show .desc, .properties_en .show .desc{
+    margin-top:0px;
+  }
   .properties .index .bigselect .selectmask select {
     font: 18px "HelveticaNeueLTStd-UltLtEx";
   }
@@ -237,7 +255,7 @@
     width: 80%;
   }
   p{
-    padding:0px 20px;
+    padding:0 10%;
   }
   .row-fluid, .container {
    width: 100%;
