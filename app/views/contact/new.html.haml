@@ -1,0 +1,31 @@
+.row-fluid.contact_us
+  .span6
+    %h2 Envianos tu consulta
+    = semantic_form_for @message, :url => contact_path do |f| 
+      = f.input :name, :label => false, :input_html => {:placeholder => "Nombre"}
+      = f.input :phone, :label => false, :input_html => {:placeholder => "Teléfono"}
+      = f.input :email, :label => false, :input_html => {:placeholder => "E-mail"}
+      = f.input :body, :as => :text,:label => false, :input_html => {:placeholder => "Commentarios...", :rows => 4}
+      = f.button :Enviar
+  .span6
+    %h2 Contacto
+    .span6
+      %h4 BELGRANO
+      %p
+        Moldes 2276 
+        %br
+        C1428CRJ - CABA
+        %br
+        Tel/Fax - 4781-7000 y Rot.
+        %br
+        info@siangroup.net
+    .span6
+      %h4(style="margin-top:30px;") ZONA NORTE
+      %p
+        San Lorenzo. 807 - La Lucila
+        %br
+        1636 - Pdo. Vicente López
+        %br
+        Tel/Fax - 4784-0593 y Rot.
+        %br
+        info@siangroup.net
