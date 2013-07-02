@@ -65,8 +65,8 @@ module Sian
       :address              => "smtp.gmail.com",
       :port                 => 587,
       :domain               => "siangroup.net",
-      :user_name            => "octaviopochiero@gmail.com",
-      :password             => "octa30277519",
+      :user_name            => "info@siangroup.net",
+      :password             => "luxuryproperties",
       :authentication       => :plain,
       :enable_starttls_auto => true
     }
