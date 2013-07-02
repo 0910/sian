@@ -9,16 +9,13 @@
       %h6 More about this property
       %p
         For more information send us a message.
-      %form
-        %input(type="text" placeholder="Name")
-        %br
-        %input(type="tel" placeholder="Phone")
-        %br
-        %input(type="email" placeholder="E-mail")
-        %br
-        %textarea(placeholder="Comments...")
-        %br
-        %input(type="submit" value="Send message")
+      = semantic_form_for @message, :url => properties_en_index_path do |f|
+        = f.input :property, :as => :hidden, :input_html => {:value => @property.name} 
+        = f.input :name, :label => false, :input_html => {:placeholder => "Name"}
+        = f.input :phone, :label => false, :input_html => {:placeholder => "Phone"}
+        = f.input :email, :label => false, :input_html => {:placeholder => "E-mail"}
+        = f.input :body, :as => :text,:label => false, :input_html => {:placeholder => "Comments...", :rows => 4}
+        = f.button 'Send message'
 .row-fluid
   %h1(style="margin-top:0px;") Description
   %p #{@property.property_description_en}

@@ -43,5 +43,18 @@ class PropertiesEnController < ApplicationController
     unless @property.property_amenities_en.nil?
       @amenities_en = @property.property_amenities_en.split(/\r\n/) 
     end
+    @message = Message.new
+  end
+
+  def create
+    @message = Message.new(params[:message])
+    
+    if @message.valid?
+      NotificationsMailer.new_message_property(@message).deliver
+      redirect_to(properties_en_index_path, :notice => "Message was successfully sent.")
+    else
+      flash.now.alert = "Please fill all fields."
+      render :new
+    end
   end
 end

@@ -14,7 +14,7 @@ Sian::Application.routes.draw do
   #get 'contact_us_en' => 'pages#contact_us_en'
   
   resources :properties, only: [:index, :show, :create]
-  resources :properties_en, only: [:index, :show]
+  resources :properties_en, only: [:index, :show, :create]
 
   match 'contact' => 'contact#new', :as => 'contact', :via => :get
   match 'contact' => 'contact#create', :as => 'contact', :via => :post
