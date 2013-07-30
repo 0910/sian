@@ -15,6 +15,11 @@ $(function(){
 		})
 
 	};
+
+	$('.edit input.cover_select').change(function() {
+		$('.edit input.cover_select').prop('checked', false);
+		$(this).prop('checked', true);
+	})
 })
 
 function switchLocation(country, selectedCity){

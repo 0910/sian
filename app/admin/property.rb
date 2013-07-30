@@ -29,8 +29,9 @@ ActiveAdmin.register Property do
     end
   end
   
-  form_with_images do |f|
-    f.input :name, hint: "El nombre debe ser único para cada propiedad, y puede ser algo como: <strong>Lujoso departamento cerca de Plaza Serrano</strong>".html_safe
+  form html: {id: 'has_many_images', multipart: true} do |f|
+    f.inputs("#{f.object.class.to_s} Details") do
+      f.input :name, hint: "El nombre debe ser único para cada propiedad, y puede ser algo como: <strong>Lujoso departamento cerca de Plaza Serrano</strong>".html_safe
     f.input :type_of_property, :label => "Tipo de propiedad", :as => :select, :collection => ["Luxury Properties", "Urban Properties", "Commercial Properties", "Developments", "Campos & Counrty Clubs"]
     f.input :country, :label => "País", :as => :select, :collection => ["Argentina", "Uruguay", "USA"]
     f.input :location, :label => "Ubicación", :as => :select, :collection => ["CABA", "Zona Norte", "Gran Buenos Aires", "Interior del País", "Punta del Este", "Montevideo", "Miami", "New York", "Otras" ]
@@ -38,6 +39,8 @@ ActiveAdmin.register Property do
     f.input :address, hint: "La dirección real de la propiedad, en base a esta dirección se mostrará el mapa de la misma, debe contener la calle, la altura, el barrio y la ciudad, por ejemplo:</br>Pringles 1395, Palermo, Buenos Aires, Argentina.".html_safe
     f.input :public_address, hint: "La dirección pública de esta propiedad, será mostrada directamente a los visitantes del sitio, no necesita ser exacta y puede incluir el piso y departamento:<br/>Pringles y Cabrera 4to 17, Palermo".html_safe
     f.input :price, :label => "Precio"
+    f.input :prioridad
+    f.input :state, :label => "Estado", :collection => ["Publicada", "Pendiente"], :include_blank => false
     
     f.inputs :name => "Características generales" do
       f.input :covered_square_meters
@@ -70,5 +73,19 @@ ActiveAdmin.register Property do
     f.input :keywords, hint: 'Las palábras clave son útiles al momento de buscar propiedades, pero pueden dejarse vácias. Un ejemplo de palabras clave: Departamento, Loft, Belgrano, Tigre'
     f.input :property_keywords_en, :label => 'Palabras clave en ingles'
     f.input :code
+      
+    end
+    f.has_many :images, title: 'images' do |fi|
+      fi.inputs "Images" do
+        if fi.object.new_record?
+          fi.input :file, as: :file
+        else
+          fi.input :_destroy, :as => :boolean, :label => "Destroy?",
+            :hint => fi.template.image_tag(fi.object.file.url(:small))
+          fi.input :cover, :as => :boolean, :label => "Cover", :input_html => {:class => 'cover_select'}
+        end
+      end
+    end
+    f.actions 
   end
 end                               

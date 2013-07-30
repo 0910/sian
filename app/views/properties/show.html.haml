@@ -6,7 +6,10 @@
   .row-fluid(style="margin-top:50px;")
     = render "sliderShow"
     .span4.detalles
-      %h6 Consulta por esta propiedad
+      - unless @property.price.empty?
+        %h6 $#{@property.price}.-
+      -else
+        %h6 Consulta por esta propiedad
       %p
         Envíenos un mensaje si desea recibir mas información sobre esta propiedad.
       = semantic_form_for @message, :url => properties_path(@property) do |f|

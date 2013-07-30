@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130701124951) do
+ActiveRecord::Schema.define(:version => 20130730150124) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -54,8 +54,9 @@ ActiveRecord::Schema.define(:version => 20130701124951) do
     t.integer  "file_file_size"
     t.datetime "file_updated_at"
     t.integer  "position"
-    t.datetime "created_at",                      :null => false
-    t.datetime "updated_at",                      :null => false
+    t.datetime "created_at",                                         :null => false
+    t.datetime "updated_at",                                         :null => false
+    t.boolean  "cover",                           :default => false
   end
 
   add_index "images", ["viewable_id"], :name => "index_images_on_viewable_id"
@@ -104,6 +105,8 @@ ActiveRecord::Schema.define(:version => 20130701124951) do
     t.text     "property_amenities_en"
     t.string   "property_keywords_en"
     t.string   "price"
+    t.integer  "prioridad"
+    t.string   "state"
   end
 
   add_index "properties", ["neighborhood_id"], :name => "index_images_on_neighborhood_id"
