@@ -14,14 +14,14 @@
 
 @font-face {
 	font: {
-		 family: 'HelveticaNeueLTStd-UltLtEx';
+		 family: 'HelveticaNeueLTStd-Cond';
 	   weight: 'normal';
 	   style: 'normal';
 	}
-	src: asset-url('helvetica/HelveticaNeueLTStd-UltLtEx.eot', font);
-	src: asset-url('helvetica/HelveticaNeueLTStd-UltLtEx.eot', font) format('embedded-opentype'),
-	     asset-url('helvetica/HelveticaNeueLTStd-UltLtEx.ttf', font) format('truetype'),
-	     asset-url('helvetica/HelveticaNeueLTStd-UltLtEx.svg', font) format('svg');
+	src: asset-url('helvetica/HelveticaNeueLTStd-Cond.eot', font);
+	src: asset-url('helvetica/HelveticaNeueLTStd-Cond.eot', font) format('embedded-opentype'),
+	     asset-url('helvetica/HelveticaNeueLTStd-Cond.ttf', font) format('truetype'),
+	     asset-url('helvetica/HelveticaNeueLTStd-Cond.svg', font) format('svg');
 }
 @font-face {
   font: {
@@ -34,6 +34,39 @@
 	     asset-url('helvetica/HelveticaLTStd-Light.ttf', font) format('truetype'),
 	     asset-url('helvetica/HelveticaLTStd-Light.svg', font) format('svg');
 }
+@font-face {
+	font: {
+		 family: 'HelveticaNeueLTStd-BoldCond';
+	   weight: 'normal';
+	   style: 'normal';
+	}
+	src: asset-url('helvetica/helveticaltstd-boldcond.eot', font);
+	src: asset-url('helvetica/helveticaltstd-boldcond.eot', font) format('embedded-opentype'),
+	     asset-url('helvetica/helveticaltstd-boldcond.ttf', font) format('truetype'),
+	     asset-url('helvetica/helveticaltstd-boldcond.svg', font) format('svg');
+}
+@font-face {
+	font: {
+		 family: 'HelveticaNeueLTStd-Cond';
+	   weight: 'normal';
+	   style: 'normal';
+	}
+	src: asset-url('helvetica/helveticaltstd-cond.eot', font);
+	src: asset-url('helvetica/helveticaltstd-cond.eot', font) format('embedded-opentype'),
+	     asset-url('helvetica/helveticaltstd-cond.ttf', font) format('truetype'),
+	     asset-url('helvetica/helveticaltstd-cond.svg', font) format('svg');
+}
+@font-face {
+	font: {
+		 family: 'HelveticaNeueLTStd-LightCond';
+	   weight: 'normal';
+	   style: 'normal';
+	}
+	src: asset-url('helvetica/helveticaltstd-lightcond.eot', font);
+	src: asset-url('helvetica/helveticaltstd-lightcond.eot', font) format('embedded-opentype'),
+	     asset-url('helvetica/helveticaltstd-lightcond.ttf', font) format('truetype'),
+	     asset-url('helvetica/helveticaltstd-lightcond.svg', font) format('svg');
+}
 /*BASICS*/
 
 body{
@@ -43,22 +76,22 @@ a:hover, a:active, a:focus {
   outline:0;
 }
 h1{
-	font:30px 'HelveticaNeueLTStd-UltLtEx';
+	font:34px 'HelveticaNeueLTStd-Cond';
 	text-align: center;
-	color: #819395;
-	margin:30px 0px;
-	letter-spacing:1.1pt;
+	color: #91a3a5;
+	margin:50px 0px 40px 0px;
+	text-transform: uppercase;
 }
 h2{
-	font:36px 'HelveticaNeueLTStd-UltLtEx';
+	font:36px 'HelveticaNeueLTStd-Cond';
 	text-align: left;
-	color: #819395;
+	color: #b1c3c5;
 	margin:30px 0px;
 	border-bottom: 1px solid #ccc;
 	letter-spacing:1.1pt;
 }
 h3{
-	font:36px 'HelveticaNeueLTStd-UltLtEx';
+	font:36px 'HelveticaNeueLTStd-Cond';
 	text-align: center;
 	color: #1bc0dd;
 	margin:30px 0px;
@@ -69,24 +102,25 @@ h4{
 	color:#606060;
 }
 h5{
-	font:24px 'HelveticaNeueLTStd-UltLtEx';
+	font:19px 'HelveticaNeueLTStd-Cond';
 	text-align: center;
-	color: #1bc0dd;
+	color: #616365;
 	margin:0px;
 }
 h6 {
     color: #819395;
-    font: 20px "HelveticaNeueLTStd-UltLtEx";
+    font: 18px "HelveticaNeueLTStd-Cond";
     margin: 0 0 20px 0;
     text-align: left;
     border-bottom: 1px solid #ccc;
-    letter-spacing:0.4pt;
+    text-transform: uppercase;
 }
 p{
-	font: 1em/1.85em 'HelveticaLTStd-Light';
+	font: 14px/24px 'HelveticaNeueLTStd-Roman';
 	margin:0;
 	padding:0;
 	color: #3A4447;
+	letter-spacing: 0.3pt;
 }
 li{
 	list-style:none;
@@ -150,7 +184,10 @@ NAV
 .navbar-fixed-top,.navbar-fixed-bottom,.navbar-static-top {
   margin:0px;
 }
-
+.navbar .nav > li > a{
+	font:16px HelveticaNeueLTStd-Cond;
+	padding:12px 0px;
+}
 @mixin border($color){
 	border: $color solid thin;
 }
@@ -166,21 +203,21 @@ NAV
 		padding:0px;
   }
   #title{
-		color: #fff;
-		font: 30px 'HelveticaNeueLTStd-UltLtEx';
+		color: #f0f0f0;
+		font: 34px 'HelveticaLTStd-Light';
 		line-height: 140px;
 		text-align:left;
 		width:100%;
 		height: 140px;	
 		margin: 0px;
 		text-decoration: none;
-		letter-spacing:1.8pt;
+		letter-spacing:0.2pt;
 	}
 	.lang{
 	    margin-top:40px;
 	    float:right;
 	    a{
-	      font: 13px 'HelveticaNeueLTStd-UltLtEx';
+	      font: 13px 'HelveticaNeueLTStd-Cond';
 			  text-align:left;
 			  color:#f0f0f0;
 			  letter-spacing:0.5pt;
@@ -201,7 +238,7 @@ NAV
 	      height:10px;
 	    }
 	    button[type="submit"]{
-	    	margin-right:0px;
+	    	margin-right:6px;
 	    }
 	}
 	#code{
@@ -209,12 +246,14 @@ NAV
 		border:0px;
 		background:none;
 		margin:0px;
-		font: 13px "HelveticaNeueLTStd-Roman";
+		font: 13px "HelveticaNeueLTStd-Cond";
 		box-shadow:none;
-		border-bottom:1px solid #fff;
 		padding:0px;
 		color:#fff;
 		float:right;
+		text-transform: uppercase;
+		border:0px;
+		margin:5px 5px 0px 0px;
 	}
 	#code_input{
 		width:50%;
@@ -225,17 +264,23 @@ NAV
 		display:none;
 	}
 	.codebox{
+		border:1px solid #fafafa;
+		border-radius: 50px;
+		float:right;
 		button {
-		    background: none;
+		    background: #f0f0f0;
 		    border: 0px;
-		    color: #f0f0f0;
-		    border:1px solid #f0f0f0;
-		    font: 11px/20px "HelveticaNeueLTStd-Roman";
+		    color: #1BC0DD;
+		    border:2px solid #f0f0f0;
+		    font: 12px/14px "HelveticaNeueLTStd-BoldCond";
 		    height: 20px;
-		    margin-top: 0px;
+		    margin-top: 3px;
+		    margin-right:6px;
 		    padding:0px;
-		    width:22%;
+		    width:20px;
 		    float:right;
+		    border-radius: 20px;
+		    padding: 0 0 0 1px;
 		}
 		button:hover {
 		    border: 0px;
@@ -274,15 +319,15 @@ FOOTER
 .footer{
 	background: #DBDACE;
 	opacity: 0.8;
-	padding-top: 5em;
+	padding-top: 4em;
 	padding-bottom: 3.5em;
 	margin-top: 4.063em;
   p{
 		margin: 20px 0 0 0;
-		color:#515050;
+		color:#707070;
 	}
 	h4{
-		font:14px 'HelveticaNeueLTStd-Roman';
+		font:15px "HelveticaNeueLTStd-Cond";
 	}
 	.container-inner{
 		width: 920px;
@@ -376,11 +421,14 @@ SLIDER
 	background:#bbb;
 }
 .bx-wrapper .bx-caption{
-	bottom:40px;
+	bottom:55px;
 	background:none;
 }
 .bx-wrapper .bx-caption span{
-	font: 30px 'HelveticaNeueLTStd-UltLtEx';
+	font: 38px 'HelveticaNeueLTStd-Cond';
+	text-shadow:0px 1px 3px #000;
+	text-transform: uppercase;
+	letter-spacing: 0.6pt;
 }
 /*
 ICONS
@@ -451,12 +499,6 @@ a.developments{
 a.developments:hover{
   background-position:-499px -127px;
 }
-.contact_us{
-  h4{
-    font:15px/18px "HelveticaNeueLTStd-Roman";
-    margin-top:7px;
-  }
-}
 
 /*Home*/
 .home, .home_en{
@@ -478,10 +520,10 @@ a.developments:hover{
 			}
 			h4{
         width:100%;
-        font:14px 'HelveticaLTStd-Light';
+        font:13px "HelveticaNeueLTStd-Cond";
 				color:#9CA2A4; 
-				letter-spacing:1pt;
 				margin:0px;
+				text-transform: uppercase;
 			}
 			hr{
 				width: 15%;
@@ -496,6 +538,9 @@ a.developments:hover{
 			}
 		}
 		
-	} 
+	}
+	.propicons{
+    margin-top:20px;
+  }
 	
 }

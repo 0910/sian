@@ -3,7 +3,7 @@
     %h1(style="margin-bottom:0;") #{@property.name}
   .row-fluid
     %h5 #{@property.public_address}
-  .row-fluid(style="margin-top:30px;")
+  .row-fluid(style="margin-top:50px;")
     = render "sliderShow"
     .span4.detalles
       %h6 Consulta por esta propiedad
@@ -34,7 +34,7 @@
         %li Estado: #{@property.estado}
         %li Luminosidad: #{@property.luminosidad}
   .span4
-    %h5 Caraterísticas del edificio
+    %h5 Características del edificio
     %ul
       %li  Categoría: #{@property.categoria}
       %li  Pisos: #{@property.pisos}
@@ -62,7 +62,7 @@
     %ul
       %li #{@property.puntos_interes}
 .row-fluid
-  %h1 Ubicacion
+  %h1 Ubicación
   #map_canvas
   
   

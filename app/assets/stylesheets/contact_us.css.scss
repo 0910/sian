@@ -1,7 +1,16 @@
 .contact_us{
+	h2{
+		font-size: 19px;
+		text-transform: uppercase;
+		letter-spacing: 0px;
+	}
+	h4{
+		font:15px "HelveticaNeueLTStd-Cond";
+		margin-top:7px;
+	}
 	form{
 		input{
-			font: 1em "HelveticaLTStd-Light";
+			font: 12px 'HelveticaNeueLTStd-Roman';
 			min-width:80%; 
 			max-width:80%; 
 			min-height:20%; 
@@ -12,24 +21,25 @@
 			width:95%;
 		}
 		button[type="submit"]{
+			width:30%;
 			border:none;
 			background:none;
-			font: 1em "HelveticaLTStd-Light";
+			font: 12px "HelveticaNeueLTStd-Cond";
 			color:#808080;
 			text-transform:uppercase;
 			margin-top:10px;
 			text-align:center;
 			border:1px solid #ccc;
-			margin-right:17%;
-			border:1px solid #ccc;
-			float:right;
-			padding:3px 6px;
+			margin:0 26.5%;
+			padding:6px 0 3px;
+			border-radius:50px;
 		}
 		button[type="submit"]:hover{
 			color:#aaa;
+			background:#fff;
 		}
 		textarea{
-			font: 1em "HelveticaLTStd-Light";
+			font: 12px/24px 'HelveticaNeueLTStd-Roman';
 			min-width:80%; 
 			max-width:80%;
 			min-height:150px; 

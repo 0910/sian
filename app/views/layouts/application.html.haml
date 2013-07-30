@@ -26,12 +26,12 @@
                 = link_to 'ESP', root_path, class: 'select'
                 = link_to 'ENG', home_en_path
             = semantic_form_for "", url: properties_path, :html => {:method => :get} do |f|
-              .span12.codebox(style="margin-left:0px;")
+              .span7.codebox(style="margin-left:0px;")
                 - if action_name == 'home_en' || action_name == 'about_us_en' || controller_name == 'properties_en' || action_name == 'contact_us_en'
-                  = f.button :VIEW
+                  = f.button :>
                   = f.input :code, :placeholder => "Code"
                 - else
-                  = f.button :VER
+                  = f.button :>
                   = f.input :code, :placeholder => "Código"
     .row-fluid
       - if action_name == 'home_en' || action_name == 'about_us_en' || controller_name == 'properties_en' || action_name == 'contact_us_en'

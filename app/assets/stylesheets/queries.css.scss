@@ -39,9 +39,9 @@
     text-shadow:none;
   	color: #1bc0dd;
   	width:auto;
-  	padding:9px 0px;
+  	padding:12px 0px;
   	text-align:center;
-  	letter-spacing:0.7pt;
+  	letter-spacing:0.4pt;
   	text-decoration:none;
   }
   .container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
@@ -186,8 +186,6 @@
   }
   .navbar .btn-navbar:hover{
     background:transparent url(arrowmini.png) no-repeat center center;
-  }
-  .propicons{
   }
 }
 @media (max-width: 568px){
