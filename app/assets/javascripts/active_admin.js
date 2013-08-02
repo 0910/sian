@@ -16,10 +16,7 @@ $(function(){
 
 	};
 
-	$('.edit input.cover_select').change(function() {
-		$('.edit input.cover_select').prop('checked', false);
-		$(this).prop('checked', true);
-	})
+	switchCover();
 })
 
 function switchLocation(country, selectedCity){
@@ -45,4 +42,15 @@ function switchLocation(country, selectedCity){
 	  	$("li#property_location_input option[value='Otras']").removeAttr('disabled');
 	  	break;	
 	}
+}
+
+document.addEventListener("DOMNodeInserted", function(evt) {  
+	switchCover();
+}, false);
+
+function switchCover(){
+	$('input.cover_select').change(function() {
+		$('.edit input.cover_select').prop('checked', false);
+		$(this).prop('checked', true);
+	})
 }

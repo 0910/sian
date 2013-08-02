@@ -43,8 +43,9 @@
         = link_to(properties_en_path(property)) do
           .item
             .ph 
-              - if image = property.images.first
-                = image_tag(image.file.url(:large))
+              - property.images.each do |image|
+                - if image.cover == true
+                  = image_tag(image.file.url(:large))
             %h5 #{property.name}
             .line
             %p $#{property.price}.-

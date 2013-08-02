@@ -79,9 +79,9 @@ ActiveAdmin.register Property do
       fi.inputs "Images" do
         if fi.object.new_record?
           fi.input :file, as: :file
+          fi.input :cover, :as => :boolean, :label => "Cover", :input_html => {:class => 'cover_select'}
         else
-          fi.input :_destroy, :as => :boolean, :label => "Destroy?",
-            :hint => fi.template.image_tag(fi.object.file.url(:small))
+          fi.input :_destroy, :as => :boolean, :label => "Destroy?", :hint => fi.template.image_tag(fi.object.file.url(:small))
           fi.input :cover, :as => :boolean, :label => "Cover", :input_html => {:class => 'cover_select'}
         end
       end

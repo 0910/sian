@@ -26,9 +26,9 @@ class PropertiesEnController < ApplicationController
     end
 
     if params[:code]
-      @properties = Property.find(:all, :conditions => {:code => params[:code]})
+      @properties = Property.find(:all, :order => 'prioridad asc', :conditions => {:code => params[:code]})
     else  
-      @properties = Property.where(:type_of_property => @type_of_property).where(:country => @country).where(:location => @location).where(:type_of_operation => @type_of_operation)
+      @properties = Property.where(:type_of_property => @type_of_property).where(:country => @country).where(:location => @location).where(:type_of_operation => @type_of_operation).where(:state => 'Publicada').order('prioridad asc')
     end
 
   end

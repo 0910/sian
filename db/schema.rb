@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130730150124) do
+ActiveRecord::Schema.define(:version => 20130802151821) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -79,8 +79,8 @@ ActiveRecord::Schema.define(:version => 20130730150124) do
     t.string   "keywords"
     t.boolean  "for_rent"
     t.boolean  "for_sale"
-    t.datetime "created_at",                                             :null => false
-    t.datetime "updated_at",                                             :null => false
+    t.datetime "created_at",                                                            :null => false
+    t.datetime "updated_at",                                                            :null => false
     t.decimal  "sale_price",              :precision => 10, :scale => 0
     t.decimal  "rent_price",              :precision => 10, :scale => 0
     t.string   "type_of_property"
@@ -105,7 +105,7 @@ ActiveRecord::Schema.define(:version => 20130730150124) do
     t.text     "property_amenities_en"
     t.string   "property_keywords_en"
     t.string   "price"
-    t.integer  "prioridad"
+    t.integer  "prioridad",                                              :default => 1
     t.string   "state"
   end
 
