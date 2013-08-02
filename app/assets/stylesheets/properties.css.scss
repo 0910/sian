@@ -131,6 +131,12 @@
 	}
 	.show{
 		.detalles{
+			h2{
+				font-size: 24px;
+				letter-spacing: 0.2pt;
+				margin:0 0 20px;
+				color:#91A3A5;
+			}
 			h1{
 				border-bottom: 1px solid #ccc;
 			}
@@ -138,9 +144,10 @@
 				margin-top:20px;
 				input{
 					background:#fff;
-					border:1px solid #ccc;
+					border:1px solid #ddd;
 					font: 12px "HelveticaNeueLTStd-Roman";
 					width:95%;
+					border-radius:5px;
 				}
 				input:focus{
 					background:#fff;
@@ -165,8 +172,8 @@
 					font: 12px "HelveticaNeueLTStd-Roman";
 					height:150px;
 					background:#fff;
-					border:1px solid #ccc;
-					border-radius:0px;
+					border:1px solid #ddd;
+					border-radius:5px;
 				}
 				textare:focus{
 					background:#fff;

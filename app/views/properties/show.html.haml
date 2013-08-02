@@ -7,7 +7,7 @@
     = render "sliderShow"
     .span4.detalles
       - unless @property.price.empty?
-        %h6 $#{@property.price}.-
+        %h2 #{@property.price}.-
       -else
         %h6 Consulta por esta propiedad
       %p

@@ -1,15 +1,20 @@
 .row-fluid.contact_us
   .span6
     %h2 Send us your inquiry
-    = semantic_form_for @message, :url => contact_en_path do |f| 
-      = f.input :name, :label => false, :input_html => {:placeholder => "Name"}
-      = f.input :phone, :label => false, :input_html => {:placeholder => "Phone"}
-      = f.input :email, :label => false, :input_html => {:placeholder => "E-mail"}
-      = f.input :body, :as => :text,:label => false, :input_html => {:placeholder => "Comments...", :rows => 4}
-      = f.button :Enviar
+    .span6.barrio
+      .hr
+    .span12.barrio
+      = semantic_form_for @message, :url => contact_en_path do |f| 
+        = f.input :name, :label => false, :input_html => {:placeholder => "Name"}
+        = f.input :phone, :label => false, :input_html => {:placeholder => "Phone"}
+        = f.input :email, :label => false, :input_html => {:placeholder => "E-mail"}
+        = f.input :body, :as => :text,:label => false, :input_html => {:placeholder => "Comments...", :rows => 4}
+        = f.button :Enviar
   .span6
     %h2 Contact
-    .span6
+    .span6.barrio
+      .hr
+    .span6.barrio
       %h4 BELGRANO
       %p
         Moldes 2276 
@@ -19,7 +24,7 @@
         Tel/fax..and lines - 4781-7000 y Rot.
         %br
         info@siangroup.net
-    .span6
+    .span6.barrio
       %h4(style="margin-top:30px;") NORTHERN AREA
       %p
         San Lorenzo. 807 - La Lucila
