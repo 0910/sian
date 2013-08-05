@@ -60,9 +60,14 @@
   		  }
   		}
 		}
-		.row-fluid{
-			.span4{
-				/*margin-bottom: 30px;*/
+		.properties, .properties_en{
+			.container{
+				.span4{
+					height: 365px;
+				}
+				.span4:nth-child(3n+1){
+					margin:0;
+				}
 			}
 		}
 		a{

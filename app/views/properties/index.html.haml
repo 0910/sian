@@ -42,10 +42,14 @@
       .span4
         = link_to(property_path(property)) do
           .item
-            .ph 
-              - property.images.each do |image|
-                - if image.cover == true
-                  = image_tag(image.file.url(:large))
+            .ph
+              - if property.images.empty? 
+                = image_tag('image-not-available.png')
+              - else
+                - property.images.each do |image|
+                  - if image.cover == true
+                    = image_tag(image.file.url(:large))
+                
             %h5 #{property.name}
             .line
             %p #{property.price}
