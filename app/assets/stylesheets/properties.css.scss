@@ -60,14 +60,9 @@
   		  }
   		}
 		}
-		.properties, .properties_en{
-			.container{
-				.span4{
-					height: 365px;
-				}
-				.span4:nth-child(3n+1){
-					margin:0;
-				}
+		.container{
+			.span4:nth-child(3n+1){
+				margin:0;
 			}
 		}
 		a{
