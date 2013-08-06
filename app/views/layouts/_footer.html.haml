@@ -3,10 +3,10 @@
     .newsletter.span3
       %h4 NEWSLETTER
       =# render 'contact/new' 
-      = semantic_form_for "" do |f| 
+      = semantic_form_for Newsletter.new, :url => newsletters_path do |f| 
         = f.input :name, :label => false, :input_html => {:placeholder => "Nombre"}
         = f.input :apellido, :label => false, :input_html => {:placeholder => "Apellido"}
-        = f.input :mail, :label => false, :input_html => {:placeholder => "E-mail"}
+        = f.input :email, :label => false, :input_html => {:placeholder => "E-mail"}
         = f.button :Enviar     
     .barrio.span6
       .span6

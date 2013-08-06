@@ -21,6 +21,10 @@ Sian::Application.routes.draw do
   
   match 'contact_en' => 'contact_en#new', :as => 'contact_en', :via => :get
   match 'contact_en' => 'contact_en#create', :as => 'contact_en', :via => :post
+
+
+  match 'newsletters' => 'newsletters#create', :as => 'newsletters', :via => :post
+  match 'newsletters_en' => 'newsletters_en#create', :as => 'newsletters_en', :via => :post
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

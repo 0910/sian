@@ -47,6 +47,7 @@ class PropertiesController < ApplicationController
   end
 
  def create
+
     @message = Message.new(params[:message])
     
     if @message.valid?
