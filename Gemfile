@@ -22,12 +22,6 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-group :development, :test do
-  gem "rspec-rails", ">= 2.11.0"
-  gem "factory_girl_rails", ">= 4.1.0"
-  gem "quiet_assets", ">= 1.0.1"
-  gem 'debugger'
-end
 
 group :development do
   gem "haml-rails", ">= 0.3.5"
