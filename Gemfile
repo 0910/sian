@@ -36,13 +36,6 @@ group :development do
   gem 'letter_opener'
 end
 
-group :test do
-  gem "email_spec", ">= 1.2.1"
-  gem "capybara"
-  gem 'capybara-webkit', '0.12.0'
-  gem 'shoulda-matchers'
-end
-
 gem 'jquery-rails'
 gem 'bxslider-rails'
 
