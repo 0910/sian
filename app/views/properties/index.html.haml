@@ -19,7 +19,7 @@
     %li
       = link_to('', properties_path(:type_of_property => 'Developments'), :class => 'developments')
       %h4 Desarollos
-      %h4 Inmobiliarios
+      %h4 Lotes
   = semantic_form_for "", url: properties_path, :html => {:method => :get} do |f|
     .row-fluid
       = f.input :type_of_property, :as => :hidden, :input_html => {:value => @type_of_property}
