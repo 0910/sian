@@ -67,6 +67,11 @@
 .row-fluid
   %h1 Ubicación
   #map_canvas
+.row-fluid
+  - unless @property.documents.empty?
+    %h6 Documentos relacionados
+    - @property.documents.each do |doc|
+      = link_to doc.file_file_name, doc.file.url, target: '_blank'
   
   
 

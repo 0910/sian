@@ -73,7 +73,11 @@
 .row-fluid
   %h1 Location
   #map_canvas
-  
+.row-fluid
+  - unless @property.documents.empty?
+    %h6 Related Documents
+    - @property.documents.each do |doc|
+      = link_to doc.file_file_name, doc.file.url, target: '_blank'
   
 
 :javascript

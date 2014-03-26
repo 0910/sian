@@ -26,6 +26,11 @@ ActiveAdmin.register Property do
         property.amenities.split("\n").join("<br/>").html_safe
       end
       row :keywords
+      row :documents do |property|
+        property.documents.collect do |doc|
+          link_to(doc.file_file_name, doc.file.url)
+        end.join(', ').html_safe
+      end
     end
   end
   
@@ -83,6 +88,15 @@ ActiveAdmin.register Property do
         else
           fi.input :_destroy, :as => :boolean, :label => "Destroy?", :hint => fi.template.image_tag(fi.object.file.url(:small))
           fi.input :cover, :as => :boolean, :label => "Cover", :input_html => {:class => 'cover_select'}
+        end
+      end
+    end
+    f.has_many :documents, title: 'document' do |fi|
+      fi.inputs "documents" do
+        if fi.object.new_record?
+          fi.input :file, as: :file
+        else
+          fi.input :_destroy, as: :boolean, label: 'Destroy?', hint: fi.object.file.url 
         end
       end
     end
