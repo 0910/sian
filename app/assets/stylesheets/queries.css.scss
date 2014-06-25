@@ -1,4 +1,17 @@
 @media (min-width: 980px){
+  .properties, .properties_en{
+    .item:hover{
+      cursor: pointer;
+      background: #E1E6E7;
+      .bottomDetail {
+        visibility: visible;
+        background-color: #ECECEC;
+      }
+    }
+  }
+}
+
+@media (min-width: 980px){
   #header{
     width:100%;
   }

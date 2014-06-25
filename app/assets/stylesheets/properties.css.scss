@@ -128,14 +128,6 @@
 		.item{
 		  border-bottom:1px solid #ccc;
 		}
-		.item:hover{
-			cursor: pointer;
-			background: #E1E6E7;
-			.bottomDetail {
-		    visibility: visible;
-		    background-color: #ECECEC;
-		  }
-		}
 	}
 	.show{
 		.detalles{
