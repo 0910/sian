@@ -9,7 +9,8 @@
         = f.input :phone, :label => false, :input_html => {:placeholder => "Teléfono"}
         = f.input :email, :label => false, :input_html => {:placeholder => "E-mail"}
         = f.input :body, :as => :text,:label => false, :input_html => {:placeholder => "Commentarios...", :rows => 4}
-        = f.button :Enviar
+        = f.button :Enviar, :class => 'hidden do-form'
+      %input{:type => 'checkbox', :class => 'humancheck'} Estoy listo para enviar el formulario
   .span6
     %h2 Contacto
     .span6.barrio
@@ -44,3 +45,9 @@
         Tel/Fax - 4784-0593 y Rot.
         %br
         info@siangroup.net
+:javascript
+  $(function(){
+    $('.humancheck').click(function(event){
+      $('.do-form').toggleClass('hidden');
+    });
+  });

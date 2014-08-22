@@ -15,7 +15,8 @@
         = f.input :phone, :label => false, :input_html => {:placeholder => "Phone"}
         = f.input :email, :label => false, :input_html => {:placeholder => "E-mail"}
         = f.input :body, :as => :text,:label => false, :input_html => {:placeholder => "Comments...", :rows => 4}
-        = f.button 'Send message'
+        = f.button :class => 'hidden do-form' Send message
+        %input{:type => 'checkbox', :class => 'humancheck'} I'm ready to send this form
 .row-fluid
   %h1(style="margin-top:0px;") Description
   %p #{@property.property_description_en}
@@ -81,6 +82,9 @@
   
 
 :javascript
+  $('.humancheck').click(function(event){
+    $('.do-form').toggleClass('hidden');
+  });
   myCenter = new google.maps.LatLng(#{@property.latitude}, #{@property.longitude});
   function initialize() {
 
