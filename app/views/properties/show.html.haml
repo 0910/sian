@@ -77,8 +77,9 @@
   
 
 :javascript
+  $('.do-form').hide();
   $('.humancheck').click(function(event){
-    $('.do-form').toggleClass('hidden');
+    $('.do-form').fadeToggle();
   });
   myCenter = new google.maps.LatLng(#{@property.latitude}, #{@property.longitude});
   function initialize() {

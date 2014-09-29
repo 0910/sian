@@ -47,7 +47,8 @@
         info@siangroup.net
 :javascript
   $(function(){
+    $('.do-form').hide();
     $('.humancheck').click(function(event){
-      $('.do-form').toggleClass('hidden');
+      $('.do-form').fadeToggle();
     });
   });
